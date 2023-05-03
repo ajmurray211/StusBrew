@@ -1,38 +1,305 @@
 .App {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Nav bar styling */
+
+.hat-logo {
+  height: 15vh;
+  object-fit: contain;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#navbar {
+  height: 15vh;
+  width: 100%;
+  /* background-color: #fcd47f; */
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 50px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+#cartButton {
+  border: none;
+  border-radius: 30px;
+  font-size: 25px;
+  width: 8rem;
+  height: 5rem;
+}
+
+#profile svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+#navSelect {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+  padding: 15px;
+  font-weight: 600;
+  font-size: xx-large;
+}
+
+.logo p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 45px;
+  padding: 0;
+}
+
+@-webkit-keyframes zoomin {
+  0% {
+    -webkit-transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(2);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-toggler {
+  width: 5rem;
+  height: 5rem;
+}
+
+/* bean styling */
+
+.bean {
+  width: 30%;
+  background-color: grey;
+}
+
+#beanPage {
+  height: 85vh;
+}
+
+/* home styling */
+
+.carousel-item {
+  width: 100%;
+}
+
+.titleImgs {
+  margin: 30px 0px;
+  contain: content;
+  height: 75vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center-top;
+  background-position-x: 50%;
+  background-position-y: 0%;
+  animation: zoomin 5s 1;
+  animation-fill-mode: forwards;
+}
+
+.titleImgs.active {
+  animation: zoomin 7s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoomin {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+
+/* Merch styles */
+
+#merchPage {
+  height: 85vh;
+}
+
+#merchBackground a {
+  font-size: x-large;
+}
+
+
+#totalMerchContainer {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0px;
+  flex-wrap: wrap;
+}
+
+/* footer styles */
+.navFooter {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#socialsContainer {
+  font-size: large;
+  height: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* newsLetter styles */
+
+#newsLetter {
+  padding: 40px 0;
+  background-color: beige;
+}
+
+#inputContainer {
+  display: flex;
+  justify-content: center;
+}
+
+#emailInput {
+  width: 60%;
+  height: 5rem;
+}
+
+#signUp {
+  position: relative;
+  right: 50px;
+  background-color: white;
+}
+
+/* product icon styling  */
+
+.prodContainer {
+  display: flex;
+  justify-content: space-around;
+  /* margin: 50px 0px; */
+  height: 40rem;
+}
+
+.prodBackground {
+  font-size: x-large;
+  margin: 16vh 0px;
+}
+
+.product {
+  width: 30%;
+  cursor: pointer;
+  height: 40rem;
+}
+
+.product img:hover {
+  transform: scale(1.1);
+}
+
+
+.product p {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product p.show {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.product img {
+  transition: transform 0.3s ease-out;
+  width: 70%;
+  padding: 20px;
+  height: 70%;
+  border-radius: 25px;
+}
+
+.outOfStockBanner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.iconDetails {
+  font-style: none;
+  text-decoration: none;
+}
+
+.iconDetails p {
+  color: black;
+}
+
+/* dtails page styles */
+
+.detailsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.prodPics img {
+  height: 40rem;
+}
+
+.detailsContainer .header h1 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.detailsContainer .header p {
+  font-size: 2rem;
+}
+
+.detailsContainer .prodDetails {
+  width: 33%;
+}
+
+.prodDescription p {
+  margin-top: 30px;
+  font-size: x-large;
+  text-align: start;
+  padding: 0;
+}
+
+#size button {
+  width: 8rem;
+  height: 3rem;
+}
+
+.specs {
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* About paage styles */
+
+#aboutContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#aboutPage {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0 100px;
+  height: 60vh;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#aboutPage h1 {
+  padding-bottom: 50px;
 }
