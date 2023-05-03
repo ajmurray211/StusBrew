@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/StusBrew/static/css/main.4d577064.css",
-    "main.js": "/StusBrew/static/js/main.441029e9.js",
+    "main.css": "/StusBrew/static/css/main.52f23cc4.css",
+    "main.js": "/StusBrew/static/js/main.10a4a02a.js",
     "static/js/787.67ea8a59.chunk.js": "/StusBrew/static/js/787.67ea8a59.chunk.js",
-    "static/media/logo.svg": "/StusBrew/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/beans.png": "/StusBrew/static/media/beans.544732c49f8f2e7747ee.png",
+    "static/media/eggs-flour.png": "/StusBrew/static/media/eggs-flour.c2e52dc5b16392aae735.png",
+    "static/media/cup-beans2.png": "/StusBrew/static/media/cup-beans2.3fbc1daea46967a8edf6.png",
+    "static/media/cinnimon-rolls.png": "/StusBrew/static/media/cinnimon-rolls.7e1f494f7ec8da6599db.png",
+    "static/media/hat-logo.png": "/StusBrew/static/media/hat-logo.e4c70f3126cc6ed43161.png",
     "index.html": "/StusBrew/index.html",
-    "main.4d577064.css.map": "/StusBrew/static/css/main.4d577064.css.map",
-    "main.441029e9.js.map": "/StusBrew/static/js/main.441029e9.js.map",
+    "main.52f23cc4.css.map": "/StusBrew/static/css/main.52f23cc4.css.map",
+    "main.10a4a02a.js.map": "/StusBrew/static/js/main.10a4a02a.js.map",
     "787.67ea8a59.chunk.js.map": "/StusBrew/static/js/787.67ea8a59.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d577064.css",
-    "static/js/main.441029e9.js"
+    "static/css/main.52f23cc4.css",
+    "static/js/main.10a4a02a.js"
   ]
 }
