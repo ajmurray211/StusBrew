@@ -1,11 +1,11 @@
 import { Button, Offcanvas, OffcanvasHeader, OffcanvasBody, NavbarToggler, Navbar } from 'reactstrap';
+import hat from '../../Assets/hat-logo.png'
 import { Link, Route, Routes } from 'react-router-dom';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { useState } from 'react';
 import Cart from '../Cart';
 
 const HamburgerNav = () => {
-    const logo = process.env.PUBLIC_URL + '/assets/hat-logo.png'
     const [isOpen, setIsOpen] = useState(false)
     const toggle = () => setIsOpen(!isOpen)
 
@@ -34,7 +34,7 @@ const HamburgerNav = () => {
                     </OffcanvasBody>
                 </Offcanvas>
                 <section className='logo'>
-                    <Link to="/"><img className="hat-logo" alt='Cut all logo' src={logo} /></Link>
+                    <Link to="/"><img className="hat-logo" alt='stus logo' src={hat} /></Link>
                     <p>Stus Brew</p>
                 </section>
                 <section id='profile'>

@@ -1,5 +1,4 @@
 import cinnimonRolls from './Assets/cinnimon-rolls.png'
-import hat from './Assets/hat-logo.png'
 import beans1 from './Assets/beans.png'
 import eggsFlour from './Assets/eggs-flour.png'
 import cupBeans from './Assets/cup-beans2.png'
