@@ -15,10 +15,10 @@ function App() {
 
   return (
     <div className="App">
-      <HamburgerNav />
+      <HamburgerNav/>
       <div>
         <Routes>
-          <Route path='' element={<Home />}></Route>
+          <Route path='/' element={<Home />}></Route>
           <Route path='/about' element={<About />}></Route>
           <Route path='/merchPage' element={<MerchPage />}></Route>
           <Route path='/beanPage' element={<BeanPage />}></Route>
