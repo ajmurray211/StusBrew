@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/StusBrew/static/css/main.52f23cc4.css",
-    "main.js": "/StusBrew/static/js/main.272bf0b8.js",
+    "main.js": "/StusBrew/static/js/main.dba4425e.js",
     "static/js/787.67ea8a59.chunk.js": "/StusBrew/static/js/787.67ea8a59.chunk.js",
     "static/media/beans.png": "/StusBrew/static/media/beans.544732c49f8f2e7747ee.png",
     "static/media/eggs-flour.png": "/StusBrew/static/media/eggs-flour.c2e52dc5b16392aae735.png",
@@ -10,11 +10,11 @@
     "static/media/hat-logo.png": "/StusBrew/static/media/hat-logo.e4c70f3126cc6ed43161.png",
     "index.html": "/StusBrew/index.html",
     "main.52f23cc4.css.map": "/StusBrew/static/css/main.52f23cc4.css.map",
-    "main.272bf0b8.js.map": "/StusBrew/static/js/main.272bf0b8.js.map",
+    "main.dba4425e.js.map": "/StusBrew/static/js/main.dba4425e.js.map",
     "787.67ea8a59.chunk.js.map": "/StusBrew/static/js/787.67ea8a59.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.52f23cc4.css",
-    "static/js/main.272bf0b8.js"
+    "static/js/main.dba4425e.js"
   ]
 }
