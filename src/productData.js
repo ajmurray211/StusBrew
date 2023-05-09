@@ -3,6 +3,12 @@ import beans1 from './Assets/beans.png'
 import eggsFlour from './Assets/eggs-flour.png'
 import cupBeans from './Assets/cup-beans2.png'
 import beanBag from './Assets/beanBag.png'
+import doughnuts from './Assets/doughnuts.png'
+import smorescookies from './Assets/smorescookies.png'
+
+console.log(smorescookies)
+
+// stusbakenbrew.com.
 
 const importAll = (r) => r.keys().map(r);
 const generalImages = importAll(require.context('./Assets', false, /\.(png|jpe?g|svg)$/));
@@ -81,12 +87,12 @@ const mainImgs = [
         caption: 'Slide 1',
         key: 1,
     },
-    // {
-    //     src: '../Assets/dough.png',
-    //     altText: 'Slide 2',
-    //     caption: 'Slide 2',
-    //     key: 2,
-    // },
+    {
+        src: cupBeans,
+        altText: 'Slide 2',
+        caption: 'Slide 2',
+        key: 2,
+    },
     {
         src: cinnimonRolls,
         altText: 'Slide 3',
@@ -94,13 +100,13 @@ const mainImgs = [
         key: 3,
     },
     {
-        src: cupBeans,
+        src: smorescookies,
         altText: 'Slide 4',
         caption: 'Slide 4',
         key: 4,
     },
     {
-        src: beans1,
+        src: doughnuts,
         altText: 'Slide 5',
         caption: 'Slide 5',
         key: 5,
