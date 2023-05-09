@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/StusBrew/static/css/main.52f23cc4.css",
-    "main.js": "/StusBrew/static/js/main.92dd6f7b.js",
+    "main.js": "/StusBrew/static/js/main.254ba4bd.js",
     "static/js/787.67ea8a59.chunk.js": "/StusBrew/static/js/787.67ea8a59.chunk.js",
+    "static/media/doughnuts.png": "/StusBrew/static/media/doughnuts.36ee22d4c222c84650e4.png",
     "static/media/sportGreyMales.png": "/StusBrew/static/media/sportGreyMales.ed2d16522c30e30c0e45.png",
     "static/media/athGreyWomans.png": "/StusBrew/static/media/athGreyWomans.b2ddcd3abe4d385c4a35.png",
     "static/media/tanTimberlend.png": "/StusBrew/static/media/tanTimberlend.61e4fbd2116654f69040.png",
@@ -17,6 +18,7 @@
     "static/media/tanMug2.png": "/StusBrew/static/media/tanMug2.7821735ad50bf6ace125.png",
     "static/media/dough.png": "/StusBrew/static/media/dough.82082c8fdd9b36c37540.png",
     "static/media/whiteMug2.png": "/StusBrew/static/media/whiteMug2.ff219c8cbf461db4cb9b.png",
+    "static/media/smorescookies.png": "/StusBrew/static/media/smorescookies.19287a5dca546d835ce5.png",
     "static/media/beans.png": "/StusBrew/static/media/beans.544732c49f8f2e7747ee.png",
     "static/media/eggs-flour.png": "/StusBrew/static/media/eggs-flour.c2e52dc5b16392aae735.png",
     "static/media/cup-beans2.png": "/StusBrew/static/media/cup-beans2.3fbc1daea46967a8edf6.png",
@@ -26,11 +28,11 @@
     "static/media/hat-logo.png": "/StusBrew/static/media/hat-logo.e4c70f3126cc6ed43161.png",
     "index.html": "/StusBrew/index.html",
     "main.52f23cc4.css.map": "/StusBrew/static/css/main.52f23cc4.css.map",
-    "main.92dd6f7b.js.map": "/StusBrew/static/js/main.92dd6f7b.js.map",
+    "main.254ba4bd.js.map": "/StusBrew/static/js/main.254ba4bd.js.map",
     "787.67ea8a59.chunk.js.map": "/StusBrew/static/js/787.67ea8a59.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.52f23cc4.css",
-    "static/js/main.92dd6f7b.js"
+    "static/js/main.254ba4bd.js"
   ]
 }
