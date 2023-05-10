@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <HamburgerNav/>
+      {/* <HamburgerNav/>
       <div>
         <Routes>
           <Route path='/' element={<Home />}></Route>
@@ -25,7 +25,8 @@ function App() {
           <Route path="/details" element={selectedProduct === null ? <Home /> : <Details />} />
         </Routes>
       </div>
-      <Footer />
+      <Footer /> */}
+      <h1>Testin prod rendering of stus brew</h1>
     </div>
   );
 }
