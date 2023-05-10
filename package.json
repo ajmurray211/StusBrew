@@ -1,7 +1,7 @@
 {
   "name": "stus_brew",
   "version": "0.1.0",
-  "homepage": "https://ajmurray211.github.io/StusBrew",
+  "homepage": "https://stusbakenbrew.com/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.8",
