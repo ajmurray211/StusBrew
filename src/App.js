@@ -9,13 +9,14 @@ import BeanPage from './components/BeanPage';
 import Details from './components/procucts/Details';
 import { ProductContext } from './context/ProductContext';
 import { useContext } from 'react';
+import image from './Assets/images.jpg'
 
 function App() {
   const { selectedProduct } = useContext(ProductContext);
 
   return (
     <div className="App">
-      <HamburgerNav/>
+      <HamburgerNav />
       <div>
         <Routes>
           <Route path='/' element={<Home />}></Route>

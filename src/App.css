@@ -1,19 +1,18 @@
 .App {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 /* Nav bar styling */
 
 .hat-logo {
-  height: 15vh;
+  height: 10vh;
   object-fit: contain;
 }
 
 #navbar {
   height: 15vh;
   width: 100%;
-  /* background-color: #fcd47f; */
   background-color: white;
   display: flex;
   flex-wrap: wrap;
@@ -25,12 +24,23 @@
   align-items: center;
 }
 
+#itemsInCart {
+  background-color: red;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
 #cartButton {
-  border: none;
-  border-radius: 30px;
-  font-size: 25px;
-  width: 8rem;
-  height: 5rem;
+  cursor: pointer;
 }
 
 #profile svg {
@@ -44,7 +54,7 @@
   flex-direction: column;
 }
 
-.link {
+.navLink {
   color: black;
   text-decoration: none;
   padding: 15px;
@@ -52,9 +62,33 @@
   font-size: xx-large;
 }
 
+.btn {
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0;
+  width: auto;
+  line-height: 1.42;
+  cursor: pointer;
+  border: 2px solid transparent;
+  padding: 14px 22px;
+  min-width: 90px;
+  border-radius: 35px;
+  background: #a11100;
+  transition: background .15s ease;
+}
+
+.btn a {
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  white-space: normal;
+  color: #fff;
+
+}
+
 .logo p {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 45px;
+  font-size: 30px;
   padding: 0;
 }
 
@@ -69,8 +103,8 @@
 }
 
 .navbar-toggler {
-  width: 5rem;
-  height: 5rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 /* bean styling */
@@ -163,26 +197,34 @@
 #inputContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 #emailInput {
   width: 60%;
   height: 5rem;
+  border-radius: 35px;
 }
 
 #signUp {
+  height: 4.8rem;
+  cursor: pointer;
   position: relative;
-  right: 50px;
+  right: 90px;
   background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: none;
 }
 
 /* product icon styling  */
 
 .prodContainer {
   display: flex;
-  justify-content: space-around;
-  /* margin: 50px 0px; */
-  height: 40rem;
+  margin: 50px 0px;
+  height: 40vh;
+  /* overflow: hidden; */
 }
 
 .prodBackground {
@@ -191,15 +233,13 @@
 }
 
 .product {
-  width: 30%;
   cursor: pointer;
-  height: 40rem;
+  height: fit-content;
 }
 
 .product img:hover {
   transform: scale(1.1);
 }
-
 
 .product p {
   opacity: 0;
@@ -217,6 +257,8 @@
   padding: 20px;
   height: 70%;
   border-radius: 25px;
+  min-width: 211px;
+  min-height: 211px;
 }
 
 .outOfStockBanner {
@@ -230,12 +272,12 @@
   border-radius: 10px;
 }
 
-.iconDetails {
+.productMeta {
   font-style: none;
   text-decoration: none;
 }
 
-.iconDetails p {
+.productMeta p {
   color: black;
 }
 
@@ -302,4 +344,59 @@
 
 #aboutPage h1 {
   padding-bottom: 50px;
+}
+
+@media screen and (max-width: 425px) {
+  .hat-logo {
+    display: none;
+  }
+
+  .productMeta p {
+    font-size: 18px;
+    display: contents;
+  }
+
+  .productMeta #price {
+    font-size: 13px;
+  }
+
+  .prodContainer {
+    min-height: 212px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+
+  .product {
+    margin: 0 30px;
+    /* width: fit-content; */
+  }
+
+
+  /* newsletter mobile styling */
+  .newsLetter p {
+    font-size: 13px;
+  }
+
+  #emailInput {
+    position: relative;
+    left: 3%;
+    width: 90%;
+    height: 5rem;
+    font-size: 18px;
+  }
+
+  #signUp {
+    height: 4.8rem;
+    cursor: pointer;
+    position: relative;
+    min-width: 50px;
+    right: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
 }
