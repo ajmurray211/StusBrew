@@ -8,8 +8,6 @@ import smorescookies from './Assets/smorescookies.png'
 
 console.log(smorescookies)
 
-// stusbakenbrew.com.
-
 const importAll = (r) => r.keys().map(r);
 const generalImages = importAll(require.context('./Assets', false, /\.(png|jpe?g|svg)$/));
 const maleSweatshirt = importAll(require.context('./Assets/Merch/maleSweatshirt', false, /\.(png|jpe?g|svg)$/));
@@ -19,6 +17,7 @@ const womansLongsleeveCrop = importAll(require.context('./Assets/Merch/womansLon
 
 const beans = [
     {
+        productId: 1,
         outOfStock: true,
         name: 'Signature',
         src: [generalImages[0]],
@@ -29,6 +28,7 @@ const beans = [
         ingredients: 'Beans'
     },
     {
+        productId: 2,
         outOfStock: false,
         name: 'Dark roast',
         src: [generalImages[0]],
@@ -39,6 +39,7 @@ const beans = [
         ingredients: 'Beans'
     },
     {
+        productId: 3,
         outOfStock: true,
         name: 'Medim roast, Caramel',
         src: [generalImages[0]],
@@ -56,6 +57,7 @@ const merch = [
         name: 'Womans cropped longsleeve',
         sizes: [{ amount: 'Small', price: '15.00' }, { amount: 'Medium', price: '18.00' }, { amount: 'Large', price: '25.00' }],
         price: '10.00',
+        productId: 4,
         outOfStock: false,
         description: ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, odit enim. Laborum debitis assumenda consequatur fugit.Natus perspiciatis fugit, non nihil vel praesentium omnis qui veritatis totam repudiandae placeat est.Ut facere magni ducimus pariatur dolorem at accusantium quibusdam, quam sequi nesciunt inventore fugiat beatae odiodignissimos asperiores dolore, a sit consequuntur delectus maxime molestiae officiis adipisci reiciendis! Fugit,sequi. Cupiditate consequuntur eos consectetur tempore quisquam tempora odit at ea, perferendis non deserunt atque autem harum nesciunt.Earum a, soluta magni similique excepturi mollitia debitis quae nisi dignissimos tempora.Sit!',
         colors: ['red', 'yellow', 'black']
@@ -65,8 +67,9 @@ const merch = [
         name: 'Sweatshirt',
         sizes: [{ amount: 'Small', price: '15.00' }, { amount: 'Medium', price: '18.00' }, { amount: 'Large', price: '25.00' }],
         price: '15.00',
+        productId: 5,
         outOfStock: true,
-
+        colors: ['red', 'yellow', 'black'],
         description: ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, odit enim. Laborum debitis assumenda consequatur fugit.Natus perspiciatis fugit, non nihil vel praesentium omnis qui veritatis totam repudiandae placeat est.Ut facere magni ducimus pariatur dolorem at accusantium quibusdam, quam sequi nesciunt inventore fugiat beatae odiodignissimos asperiores dolore, a sit consequuntur delectus maxime molestiae officiis adipisci reiciendis! Fugit,sequi. Cupiditate consequuntur eos consectetur tempore quisquam tempora odit at ea, perferendis non deserunt atque autem harum nesciunt.Earum a, soluta magni similique excepturi mollitia debitis quae nisi dignissimos tempora.Sit!', colors: ['grey', 'white', 'black']
     },
     {
@@ -74,6 +77,7 @@ const merch = [
         name: 'Mug w/ logo',
         sizes: [{ amount: 'Small', price: '15.00' }, { amount: 'Medium', price: '18.00' }, { amount: 'Large', price: '25.00' }],
         price: '8.00',
+        productId: 6,
         outOfStock: false,
         description: ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, odit enim. Laborum debitis assumenda consequatur fugit.Natus perspiciatis fugit, non nihil vel praesentium omnis qui veritatis totam repudiandae placeat est.Ut facere magni ducimus pariatur dolorem at accusantium quibusdam, quam sequi nesciunt inventore fugiat beatae odiodignissimos asperiores dolore, a sit consequuntur delectus maxime molestiae officiis adipisci reiciendis! Fugit,sequi. Cupiditate consequuntur eos consectetur tempore quisquam tempora odit at ea, perferendis non deserunt atque autem harum nesciunt.Earum a, soluta magni similique excepturi mollitia debitis quae nisi dignissimos tempora.Sit!',
         colors: ['grey', 'white']

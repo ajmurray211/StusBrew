@@ -132,11 +132,12 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: center-top;
+  background-position: center;
   background-position-x: 50%;
   background-position-y: 0%;
   animation: zoomin 5s 1;
   animation-fill-mode: forwards;
+  overflow: hidden;
 }
 
 .titleImgs.active {
@@ -154,11 +155,10 @@
   }
 }
 
-
 /* Merch styles */
 
 #merchPage {
-  height: 85vh;
+  height: fit-content;
 }
 
 #merchBackground a {
@@ -220,15 +220,24 @@
 
 /* product icon styling  */
 
+.productMeta #price {
+  font-size: 15px;
+}
+
+.productMeta {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+}
+
 .prodContainer {
   display: flex;
   margin: 50px 0px;
-  height: 40vh;
-  /* overflow: hidden; */
 }
 
 .prodBackground {
-  font-size: x-large;
   margin: 16vh 0px;
 }
 
@@ -241,18 +250,19 @@
   transform: scale(1.1);
 }
 
-.product p {
+.product div {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.product p.show {
+.product div.show {
   cursor: pointer;
   opacity: 1;
 }
 
 .product img {
   transition: transform 0.3s ease-out;
+  max-width: 25rem;
   width: 70%;
   padding: 20px;
   height: 70%;
@@ -270,11 +280,6 @@
   font-size: 1.2rem;
   padding: 0.5rem;
   border-radius: 10px;
-}
-
-.productMeta {
-  font-style: none;
-  text-decoration: none;
 }
 
 .productMeta p {
@@ -351,13 +356,9 @@
     display: none;
   }
 
-  .productMeta p {
+  .productMeta div {
     font-size: 18px;
     display: contents;
-  }
-
-  .productMeta #price {
-    font-size: 13px;
   }
 
   .prodContainer {
@@ -366,6 +367,8 @@
     overflow-x: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
+    padding-bottom: 20px;
+    height: auto;
   }
 
   .product {

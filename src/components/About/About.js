@@ -1,4 +1,3 @@
-import './about.css'
 
 const About = (props) => {
     const stu = process.env.PUBLIC_URL + '/assets/stu.png'
