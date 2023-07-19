@@ -21,10 +21,10 @@ const HamburgerNav = () => {
                         Stus Brew
                     </OffcanvasHeader>
                     <OffcanvasBody id='navSelect'>
-                        <Link className='link' onClick={toggle} to='/'>Home</Link>
-                        <Link className='link' onClick={toggle} to='/merchPage'>Merch</Link>
-                        <Link className='link' onClick={toggle} to='/beanPage'>Beans</Link>
-                        <Link className='link' onClick={toggle} to='/about'>About</Link>
+                        <Link className='navLink' onClick={toggle} to='/'>Home</Link>
+                        <Link className='navLink' onClick={toggle} to='/merchPage'>Merch</Link>
+                        <Link className='navLink' onClick={toggle} to='/beanPage'>Beans</Link>
+                        <Link className='navLink' onClick={toggle} to='/about'>About</Link>
                         <div className='navFooter'>
                             <div>©2019, Stus Brew</div>
                             <section id="socials">
