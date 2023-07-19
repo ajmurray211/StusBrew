@@ -6,14 +6,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ProductProvider, ProductContext } from './context/ProductContext';
 import { BrowserRouter, HashRouter } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <HashRouter>
-      <ProductProvider>
-        <App />
-      </ProductProvider>
+      <CartProvider>
+        <ProductProvider>
+          <App />
+        </ProductProvider>
+      </CartProvider>
     </HashRouter>
   </React.StrictMode>
 );
