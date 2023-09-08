@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
     Carousel,
     CarouselItem,
@@ -27,14 +28,26 @@ function Scroller(props) {
         setActiveIndex(newIndex);
     };
 
-    const slides = props.items.map((item) => {
+    const slides = props.items.map((item, index) => {
         return (
             <CarouselItem
                 onExiting={() => setAnimating(true)}
                 onExited={() => setAnimating(false)}
                 key={item.src}
             >
-                <img className='titleImgs' src={item.src} alt={item.altText} />
+                <div
+                    className={`titleImgs ${index === 0 ? 'active' : ''} titleDiv`}
+                    key={index}
+                    style={{ backgroundImage: `url(${item.src})` }}
+                >
+                    <div className='announcment'>
+                        <h2>
+                            {item.announcment.title}
+                        </h2>
+                        <p>{item.announcment.message}</p>
+                        <Link className='titleLink' to={`/${item.announcment.to}`} >{item.announcment.button}</Link>
+                    </div>
+                </div>
             </CarouselItem>
         );
     });
