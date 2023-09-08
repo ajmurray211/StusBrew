@@ -1,6 +1,8 @@
+import stu from '../Assets/stu.jpeg'
+import Charities from './Charities';
 
 const About = (props) => {
-    const stu = process.env.PUBLIC_URL + '/assets/stu.png'
+    const stu = process.env.PUBLIC_URL + '/assets/stu.jpeg'
     return (
         <div id='aboutPage'>
             <h1>Information about the Stu that loves his brew</h1>
@@ -15,6 +17,8 @@ const About = (props) => {
                     those items pair perfectly with a cup of Stu’s brewed coffee.
                 </p>
             </div>
+
+            <Charities />
         </div>
     );
 }

@@ -1,9 +1,9 @@
 import { Button, Offcanvas, OffcanvasHeader, OffcanvasBody, NavbarToggler, Navbar } from 'reactstrap';
-import hat from '../../Assets/hat-logo.png'
+import hat from '../Assets/hat-logo.png'
 import { Link, Route, Routes } from 'react-router-dom';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { useState } from 'react';
-import Cart from '../Cart';
+import Cart from './Cart';
 
 const HamburgerNav = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -13,7 +13,6 @@ const HamburgerNav = () => {
     const toggleModal = () => setIsModalpen(!isModalOpen)
 
     return (
-        <div>
             <Navbar sticky='top' id='navbar'>
                 <NavbarToggler onClick={toggle} />
                 <Offcanvas isOpen={isOpen} toggle={toggle}>
@@ -38,11 +37,9 @@ const HamburgerNav = () => {
                     <p>Stus Brew</p>
                 </section>
                 <section id='profile'>
-                    {/* <SearchIcon fontSize='large' /> */}
                     <Cart isOpen ={isModalOpen} toggle={toggleModal} />
                 </section>
             </Navbar>
-        </div>
     );
 }
 

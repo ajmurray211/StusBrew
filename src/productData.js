@@ -1,8 +1,6 @@
-import cinnimonRolls from './Assets/cinnimon-rolls.png'
-import beans1 from './Assets/beans.png'
+import cinnimonRolls from './Assets/cinnimon-rolls.jpeg'
 import eggsFlour from './Assets/eggs-flour.png'
-import cupBeans from './Assets/cup-beans2.png'
-import beanBag from './Assets/beanBag.png'
+import bagels from './Assets/bagles.jpeg'
 import doughnuts from './Assets/doughnuts.png'
 import smorescookies from './Assets/smorescookies.png'
 
@@ -15,107 +13,55 @@ const mug1 = importAll(require.context('./Assets/Merch/mug1', false, /\.(png|jpe
 const mug2 = importAll(require.context('./Assets/Merch/mug2', false, /\.(png|jpe?g|svg)$/));
 const womansLongsleeveCrop = importAll(require.context('./Assets/Merch/womansLongsleeveCrop', false, /\.(png|jpe?g|svg)$/));
 
-const beans = [
-    {
-        productId: 1,
-        outOfStock: true,
-        name: 'Signature',
-        src: [generalImages[0]],
-        type: 'Blend',
-        area: 'South America',
-        sizes: [{ amount: '12 ounces', price: '8.00' }, { amount: '1 lb', price: '15.00' }, { amount: '2 lbs', price: '25.00' }],
-        description: ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, odit enim. Laborum debitis assumenda consequatur fugit.Natus perspiciatis fugit, non nihil vel praesentium omnis qui veritatis totam repudiandae placeat est.Ut facere magni ducimus pariatur dolorem at accusantium quibusdam, quam sequi nesciunt inventore fugiat beatae odiodignissimos asperiores dolore, a sit consequuntur delectus maxime molestiae officiis adipisci reiciendis! Fugit,sequi. Cupiditate consequuntur eos consectetur tempore quisquam tempora odit at ea, perferendis non deserunt atque autem harum nesciunt.Earum a, soluta magni similique excepturi mollitia debitis quae nisi dignissimos tempora.Sit!',
-        ingredients: 'Beans'
-    },
-    {
-        productId: 2,
-        outOfStock: false,
-        name: 'Dark roast',
-        src: [generalImages[0]],
-        type: 'Blend',
-        area: 'Huila Department, Colombia',
-        sizes: [{ amount: '12 ounces', price: '8.00' }, { amount: '1 lb', price: '15.00' }, { amount: '2 lbs', price: '25.00' }],
-        description: ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, odit enim. Laborum debitis assumenda consequatur fugit.Natus perspiciatis fugit, non nihil vel praesentium omnis qui veritatis totam repudiandae placeat est.Ut facere magni ducimus pariatur dolorem at accusantium quibusdam, quam sequi nesciunt inventore fugiat beatae odiodignissimos asperiores dolore, a sit consequuntur delectus maxime molestiae officiis adipisci reiciendis! Fugit,sequi. Cupiditate consequuntur eos consectetur tempore quisquam tempora odit at ea, perferendis non deserunt atque autem harum nesciunt.Earum a, soluta magni similique excepturi mollitia debitis quae nisi dignissimos tempora.Sit!',
-        ingredients: 'Beans'
-    },
-    {
-        productId: 3,
-        outOfStock: true,
-        name: 'Medim roast, Caramel',
-        src: [generalImages[0]],
-        type: 'Blend',
-        area: 'South America',
-        sizes: [{ amount: '12 ounces', price: '8.00' }, { amount: '1 lb', price: '15.00' }, { amount: '2 lbs', price: '25.00' }],
-        description: ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, odit enim. Laborum debitis assumenda consequatur fugit.Natus perspiciatis fugit, non nihil vel praesentium omnis qui veritatis totam repudiandae placeat est.Ut facere magni ducimus pariatur dolorem at accusantium quibusdam, quam sequi nesciunt inventore fugiat beatae odiodignissimos asperiores dolore, a sit consequuntur delectus maxime molestiae officiis adipisci reiciendis! Fugit,sequi. Cupiditate consequuntur eos consectetur tempore quisquam tempora odit at ea, perferendis non deserunt atque autem harum nesciunt.Earum a, soluta magni similique excepturi mollitia debitis quae nisi dignissimos tempora.Sit!',
-        ingredients: 'Beans, caremel'
-    },
-]
-
-const merch = [
-    {
-        src: womansLongsleeveCrop,
-        name: 'Womans cropped longsleeve',
-        sizes: [{ amount: 'Small', price: '15.00' }, { amount: 'Medium', price: '18.00' }, { amount: 'Large', price: '25.00' }],
-        price: '10.00',
-        productId: 4,
-        outOfStock: false,
-        description: ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, odit enim. Laborum debitis assumenda consequatur fugit.Natus perspiciatis fugit, non nihil vel praesentium omnis qui veritatis totam repudiandae placeat est.Ut facere magni ducimus pariatur dolorem at accusantium quibusdam, quam sequi nesciunt inventore fugiat beatae odiodignissimos asperiores dolore, a sit consequuntur delectus maxime molestiae officiis adipisci reiciendis! Fugit,sequi. Cupiditate consequuntur eos consectetur tempore quisquam tempora odit at ea, perferendis non deserunt atque autem harum nesciunt.Earum a, soluta magni similique excepturi mollitia debitis quae nisi dignissimos tempora.Sit!',
-        colors: ['red', 'yellow', 'black']
-    },
-    {
-        src: maleSweatshirt,
-        name: 'Sweatshirt',
-        sizes: [{ amount: 'Small', price: '15.00' }, { amount: 'Medium', price: '18.00' }, { amount: 'Large', price: '25.00' }],
-        price: '15.00',
-        productId: 5,
-        outOfStock: true,
-        colors: ['red', 'yellow', 'black'],
-        description: ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, odit enim. Laborum debitis assumenda consequatur fugit.Natus perspiciatis fugit, non nihil vel praesentium omnis qui veritatis totam repudiandae placeat est.Ut facere magni ducimus pariatur dolorem at accusantium quibusdam, quam sequi nesciunt inventore fugiat beatae odiodignissimos asperiores dolore, a sit consequuntur delectus maxime molestiae officiis adipisci reiciendis! Fugit,sequi. Cupiditate consequuntur eos consectetur tempore quisquam tempora odit at ea, perferendis non deserunt atque autem harum nesciunt.Earum a, soluta magni similique excepturi mollitia debitis quae nisi dignissimos tempora.Sit!', colors: ['grey', 'white', 'black']
-    },
-    {
-        src: mug2,
-        name: 'Mug w/ logo',
-        sizes: [{ amount: 'Small', price: '15.00' }, { amount: 'Medium', price: '18.00' }, { amount: 'Large', price: '25.00' }],
-        price: '8.00',
-        productId: 6,
-        outOfStock: false,
-        description: ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, odit enim. Laborum debitis assumenda consequatur fugit.Natus perspiciatis fugit, non nihil vel praesentium omnis qui veritatis totam repudiandae placeat est.Ut facere magni ducimus pariatur dolorem at accusantium quibusdam, quam sequi nesciunt inventore fugiat beatae odiodignissimos asperiores dolore, a sit consequuntur delectus maxime molestiae officiis adipisci reiciendis! Fugit,sequi. Cupiditate consequuntur eos consectetur tempore quisquam tempora odit at ea, perferendis non deserunt atque autem harum nesciunt.Earum a, soluta magni similique excepturi mollitia debitis quae nisi dignissimos tempora.Sit!',
-        colors: ['grey', 'white']
-    },
-]
-
 const mainImgs = [
     {
         src: eggsFlour,
-        altText: 'Slide 1',
-        caption: 'Slide 1',
-        key: 1,
+        announcment: {
+            to: 'about',
+            title: 'Lending a helping bean',
+            button: 'Learn more',
+            message: 'Learn about what charities we support and donate to.'
+        }
     },
     {
-        src: cupBeans,
-        altText: 'Slide 2',
-        caption: 'Slide 2',
-        key: 2,
+        src: bagels,
+        announcment: {
+            to: 'about',
+            title: "Stu's story",
+            button: 'Learn more',
+            message: 'The story of Stu and why this shop means so much.'
+        }
     },
     {
         src: cinnimonRolls,
-        altText: 'Slide 3',
-        caption: 'Slide 3',
-        key: 3,
+        announcment: {
+            to: 'beanPage',
+            title: 'Checkout our current baked goods!',
+            button: 'Learn more',
+            message: 'Learn about what charities we support and donate to.'
+        },
     },
     {
         src: smorescookies,
-        altText: 'Slide 4',
-        caption: 'Slide 4',
-        key: 4,
+
+        announcment: {
+            to: 'merchPage',
+            title: 'Checkout our current Merch!',
+            button: 'Learn more',
+            message: 'Find the hottest stus styles on the block.'
+        },
     },
     {
         src: doughnuts,
-        altText: 'Slide 5',
-        caption: 'Slide 5',
-        key: 5,
+        announcment: {
+            to: 'about',
+            title: 'Lending a helping bean',
+            button: 'Learn more',
+            message: 'Learn about what charities we support and donate to.'
+        }
+        ,
     },
 ];
 
 
-export { beans, merch, mainImgs }
+export { mainImgs }
