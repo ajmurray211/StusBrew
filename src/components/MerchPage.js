@@ -1,9 +1,18 @@
-import { Button } from "reactstrap";
 import Icon from "./procucts/Icon";
-import { beans, merch, mainImgs } from '../productData.js'
-
+import { useDataFetcher } from "../hooks/useDataFetcher";
+import { useContext, useEffect } from "react";
+import { CartContext } from '../context/CartContext';
 
 const MerchPage = () => {
+    const { API_URL } = useContext(CartContext)
+
+    const { getData: getMerch, data: merch, error: merchError, loading: merchLoading } = useDataFetcher();
+
+    useEffect(() => {
+        getMerch(`${API_URL}merch`)
+    }, []);
+
+    console.log(merch)
 
     const mappedMerchItems = merch.map((product) => {
         return (
