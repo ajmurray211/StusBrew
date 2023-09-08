@@ -1,4 +1,5 @@
 .App {
+  /* background-color: #f9f9f9; */
   text-align: center;
   font-family: "Roboto Condensed", sans-serif;
 }
@@ -6,8 +7,9 @@
 /* Nav bar styling */
 
 .hat-logo {
-  height: 10vh;
+  height: 5vh;
   object-fit: contain;
+  margin-bottom: 10px;
 }
 
 #navbar {
@@ -118,26 +120,78 @@
   height: 85vh;
 }
 
+#totalBeanContainer {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0px;
+  flex-wrap: wrap;
+}
+
 /* home styling */
+
+@keyframes easeInFromLeftAnimation {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.titleLink {
+  background-color: #fad018;
+  position: absolute;
+  right: -6px;
+  bottom: 12px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all .3s ease-in-out;
+  color: #111;
+  font-size: 13px;
+  font-weight: 400;
+  font-style: normal;
+  height: auto;
+  line-height: 30px;
+  padding: 9px 30px;
+  border-radius: 0;
+}
+
+.announcment {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: opacity 0.3s ease-out, transform 0.7s ease-out;
+  animation: easeInFromLeftAnimation 1s ease-in-out;
+  width: 40%;
+  position: absolute;
+  top: 40%;
+  background-color: rgba(255, 255, 255, 0.855);
+  max-width: fit-content;
+}
+
+.announcment h2 {
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+.announcment p {
+  padding: 0 20px 72px 20px;
+}
 
 .carousel-item {
   width: 100%;
 }
 
 .titleImgs {
-  margin: 30px 0px;
-  contain: content;
-  height: 75vh;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  margin: auto;
+  height: 80vh;
+  width: 90%;
   background-size: cover;
   background-position: center;
-  background-position-x: 50%;
-  background-position-y: 0%;
   animation: zoomin 5s 1;
   animation-fill-mode: forwards;
-  overflow: hidden;
 }
 
 .titleImgs.active {
@@ -147,11 +201,11 @@
 
 @keyframes zoomin {
   from {
-    transform: scale(1);
+    transform: scale(.97);
   }
 
   to {
-    transform: scale(1.1);
+    transform: scale(1);
   }
 }
 
@@ -164,7 +218,6 @@
 #merchBackground a {
   font-size: x-large;
 }
-
 
 #totalMerchContainer {
   display: flex;
@@ -235,9 +288,11 @@
 .prodContainer {
   display: flex;
   margin: 50px 0px;
+  justify-content: space-evenly;
 }
 
 .prodBackground {
+  background-color: white;
   margin: 16vh 0px;
 }
 
@@ -288,19 +343,51 @@
 
 /* dtails page styles */
 
-.detailsContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr;
 }
 
-.prodPics img {
-  height: 40rem;
+.gridItem {
+  padding: 30px;
+}
+
+.prodImg {
+  padding: 10px;
+  height: 30rem;
+}
+
+.prodImgs {
+  margin-top: 50px;
+  width: min-content;
+  position: relative;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  max-height: calc(100vh + 20vh);
+}
+
+.miniProdImg {
+  width: 8rem;
+  margin: 10px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.miniProdImgs {
+  position: sticky;
+  top: 0;
+}
+
+.detailsContainer {
+  display: flex;
+  width: fit-content;
 }
 
 .detailsContainer .header h1 {
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 5rem;
   font-weight: 700;
 }
 
@@ -308,15 +395,11 @@
   font-size: 2rem;
 }
 
-.detailsContainer .prodDetails {
-  width: 33%;
-}
-
 .prodDescription p {
   margin-top: 30px;
-  font-size: x-large;
+  font-size: 18px;
   text-align: start;
-  padding: 0;
+  padding: 10px;
 }
 
 #size button {
@@ -344,24 +427,58 @@
   align-items: center;
   justify-content: center;
   margin: 0 100px;
-  height: 60vh;
 }
 
 #aboutPage h1 {
   padding-bottom: 50px;
 }
 
+
+/* locations styles */
+.infoContainer {
+  padding: 0 20px;
+
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c9a6755d;
+  min-height: 300px;
+}
+
+/* Charities styles */
+.charitiesContainer {
+  padding: 0 20px;
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  text-align: start;
+  background-color: #c9a6755d;
+  min-height: 300px;
+}
+
+
 @media screen and (max-width: 425px) {
+
+
+  /* home styling */
   .hat-logo {
     display: none;
   }
 
-  .productMeta div {
+  #navbar {
+    position: sticky;
+    top: 0;
+  }
+
+  /* icon styling */
+  .product div {
     font-size: 18px;
     display: contents;
   }
 
   .prodContainer {
+    justify-content: start;
     min-height: 212px;
     overflow-y: hidden;
     overflow-x: scroll;
@@ -373,9 +490,7 @@
 
   .product {
     margin: 0 30px;
-    /* width: fit-content; */
   }
-
 
   /* newsletter mobile styling */
   .newsLetter p {
@@ -400,6 +515,18 @@
     justify-content: center;
     align-items: center;
     padding: 0;
+  }
+
+  /* details pages */
+  .miniProdImg {
+    display: none;
+  }
+
+  .grid {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
 }
