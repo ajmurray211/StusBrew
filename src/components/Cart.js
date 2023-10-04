@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from "reactstrap";
+import { Button, Modal, ModalBody, ModalFooter, ModalHeader, Popover, PopoverBody, PopoverHeader, UncontrolledPopover } from "reactstrap";
 import { CartContext } from "../context/CartContext";
 import axios from "axios";
 
@@ -32,23 +32,29 @@ const Cart = (props) => {
                     <div id="itemsInCart">{getCartItemCount()}</div>
                 )}
             </div>
-            <Modal centered size="lg" isOpen={props.isOpen} >
-                <ModalHeader toggle={props.toggle}>Your Cart</ModalHeader>
-                <ModalBody>
-                    {getCartItemCount() === 0 ? 'Your cart is empty' : mappedCartItems}
-                </ModalBody>
-                <ModalFooter >
-                    <Button color="secondary" onClick={handleCheckout}>
-                        Check Out
-                    </Button>
-                    <Button color="secondary" onClick={() => {
-                        clearCart();
-                        props.toggle();
-                    }}>
-                        Clear cart
-                    </Button>
-                </ModalFooter>
-            </Modal>
+            <UncontrolledPopover
+                placement="left"
+                target="cartButton"
+            >
+                <PopoverHeader>
+                </PopoverHeader>
+                <PopoverBody>
+                    <div>
+                        {getCartItemCount() === 0 ? 'Your cart is empty' : mappedCartItems}
+                    </div>
+                    <div>
+                        <Button id="cart" color="secondary" onClick={handleCheckout}>
+                            Check Out
+                        </Button>
+                        <Button color="secondary" onClick={() => {
+                            clearCart();
+                            props.toggle();
+                        }}>
+                            Clear cart
+                        </Button>
+                    </div>
+                </PopoverBody>
+            </UncontrolledPopover>
         </div>
     );
 }
