@@ -1,10 +1,10 @@
-import Scroller from './Scroller'
-import Location from './Location';
-import Charities from './Charities';
+import Scroller from '../components/Scroller'
+import Location from '../components/Location';
+import Charities from '../components/Charities';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Button } from 'reactstrap';
-import NewsLetter from './NewsLetter';
-import Icon from './procucts/Icon';
+import NewsLetter from '../components/NewsLetter';
+import Icon from '../components/Icon';
 import { mainImgs } from '../productData.js'
 import { Link } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';

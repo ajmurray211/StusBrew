@@ -1,8 +1,8 @@
 import { useContext, useState } from 'react';
-import { ProductContext } from '../../context/ProductContext';
-import { CartContext } from '../../context/CartContext';
+import { ProductContext } from '../context/ProductContext';
+import { CartContext } from '../context/CartContext';
 import { Link } from 'react-router-dom';
-import noImg from '../../Assets/noImageProvided.jpeg'
+import noImg from '../Assets/noImageProvided.jpeg'
 
 const Icon = (props) => {
   const { setSelectedProduct, selectedProduct } = useContext(ProductContext);

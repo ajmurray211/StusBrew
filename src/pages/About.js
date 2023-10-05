@@ -1,5 +1,5 @@
 import stu from '../Assets/stu.jpeg'
-import Charities from './Charities';
+import Charities from '../components/Charities';
 
 const About = (props) => {
     const stu = process.env.PUBLIC_URL + '/assets/stu.jpeg'

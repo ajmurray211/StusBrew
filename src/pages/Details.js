@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from 'react';
-import { useToggler } from '../../hooks/useToggler';
-import { ProductContext } from '../../context/ProductContext';
+import { useToggler } from '../hooks/useToggler';
+import { ProductContext } from '../context/ProductContext';
 import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownToggle, Label } from 'reactstrap';
-import { CartContext } from '../../context/CartContext';
-import noImg from '../../Assets/noImageProvided.jpeg'
+import { CartContext } from '../context/CartContext';
+import noImg from '../Assets/noImageProvided.jpeg'
 
 const Details = () => {
     const { selectedProduct } = useContext(ProductContext);
