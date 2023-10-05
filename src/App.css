@@ -15,6 +15,10 @@
   --font-2: 'Lato', sans-serif;
 }
 
+.tempBackground {
+  background-color: var(--color-3);
+}
+
 .title {
   font-size: 40px;
   font-family: var(--font-1)
@@ -252,6 +256,55 @@
 /* Menu Styles */
 
 /* Products styles */
+
+#productsPage {
+  margin: 20px 0;
+}
+
+#productsWelcomeContainer {
+  display: flex;
+  padding: 7vw;
+  margin: 20px 0;
+}
+
+#productsAccentDiv {
+  position: relative;
+  bottom: 3vw;
+  left: 15vw;
+  width: 40vw;
+  height: 30vw;
+  background-color: var(--color-1);
+}
+
+#productWelcomeMsg{
+  position: relative;
+  font-family: var(--font-1);
+  right: 10vw;
+}
+
+#welcomeImg {
+  width: 40vw;
+  height: 30vw;
+  background-color: var(--color-3);
+  position: relative;
+  right: 8vw;
+}
+
+#productsSection {
+  padding: 20px;
+  /* background-color: var(--color-1); */
+}
+
+#productSelectorContainer button {
+  margin: 20px;
+}
+
+#productsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
 
 /* Success styles */
 
