@@ -22,7 +22,7 @@ const HamburgerNav = () => {
                 <OffcanvasBody id='navSelect'>
                     <Link className='navLink' onClick={toggle} to='/'>Home</Link>
                     <Link className='navLink' onClick={toggle} to='/products'>Products</Link>
-                    <Link className='navLink' onClick={toggle} to='/faq'>Faq's</Link>
+                    <Link className='navLink' onClick={toggle} to='/faq'>FAQ's</Link>
                     <Link className='navLink' onClick={toggle} to='/about'>About</Link>
                     <div className='navFooter'>
                         <div>©2019, Stus Brew</div>

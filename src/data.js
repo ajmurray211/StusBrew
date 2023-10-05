@@ -23,7 +23,7 @@ const sandwichesAndSnacks = [
   { name: "Wraps", types: ["Chicken Caesar", "Veggie", "Turkey Club"] },
 ];
 
-const faqs = [
+const questions = [
   {
     question: "What types of coffee do you offer?",
     answer: "We offer a variety of coffee options, including espresso-based drinks, brewed coffee, and specialty beverages."
@@ -43,10 +43,6 @@ const faqs = [
   {
     question: "What sizes are available for your drinks?",
     answer: "We offer a range of cup sizes to suit your preference. Our sizes include small, medium, and large."
-  },
-  {
-    question: "Is your coffee sourced sustainably or ethically?",
-    answer: "We take pride in sourcing our coffee beans sustainably and ethically, supporting fair trade and eco-friendly practices."
   },
   {
     question: "Do you have any food options available?",
@@ -84,10 +80,6 @@ const faqs = [
     question: "Are gift cards available?",
     answer: "Yes, we offer gift cards that you can purchase and share with your friends and loved ones."
   },
-  {
-    question: "What safety measures are in place?",
-    answer: "Your health and safety are our top priorities. We have implemented strict cleanliness and hygiene practices, including COVID-19 safety protocols."
-  }
 ];
 
-export default { drinks, pastriesAndBakedGoods, sandwichesAndSnacks, faqs }
+export { drinks, pastriesAndBakedGoods, sandwichesAndSnacks, questions }
