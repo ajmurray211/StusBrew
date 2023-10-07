@@ -28,6 +28,7 @@ const Faq = () => {
 
             <div id="faqFooter">
                 <img src={logo} id="faqLogo"/>
+                <p className="body">Email us if you have anymore questions!</p>
                 {/* <Button color="light">Contact us here!</Button> */}
             </div>
         </div>

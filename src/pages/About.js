@@ -5,10 +5,10 @@ const About = (props) => {
     const stu = process.env.PUBLIC_URL + '/assets/stu.jpeg'
     return (
         <div id='aboutPage'>
-            <h1>Information about the Stu that loves his brew</h1>
+            <h1 className='title'>About Stus brew</h1>
             <div id='aboutContainer'>
-                <img src={stu} alt='black and grey picture of stu' />
-                <p>
+                <img className='aboutImg' src={stu} alt='black and grey picture of stu' />
+                <p className='body aboutMsg'>
                     Stu’s Brew is an up and coming business with the hopes of opening a storefront in Southern
                     California soon. My name is Claire and I’m from Dana Point, CA. It is a dream of mine to open
                     a coffee shop in memory of my Grandpa Stu. Our early morning trips to the coffee shop is one

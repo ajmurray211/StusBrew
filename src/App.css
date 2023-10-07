@@ -128,13 +128,13 @@
 
 /* About  styles */
 
-#aboutContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.aboutMsg {
+  margin: 20px;
+  min-width: 370px;
 }
 
 #aboutPage {
+  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -142,8 +142,28 @@
   margin: 0 100px;
 }
 
+#aboutContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 #aboutPage h1 {
   padding-bottom: 50px;
+  min-width: 370px;
+}
+
+.aboutMsg {
+  width: 40vw;
+  min-width: 370px;
+}
+
+@media screen and (max-width: 425px) {
+
+  .aboutImg {
+    width: 370px;
+  }
 }
 
 /* home styling */
@@ -418,8 +438,8 @@
   justify-content: space-between;
 }
 
-.navSocialsContainer{
-  padding-left:  10px;
+.navSocialsContainer {
+  padding-left: 10px;
   border-left: 1px solid black;
 }
 
@@ -459,7 +479,7 @@
 
 .cartComponent {
   margin-right: 10px;
-  padding-right:  10px;
+  padding-right: 10px;
 }
 
 .cartIconSection {
@@ -580,7 +600,7 @@
   border-radius: none;
 }
 
-.newsLetterMsg{
+.newsLetterMsg {
   padding: 0 15px;
 }
 
@@ -681,12 +701,11 @@
 /* locations styles */
 .infoContainer {
   padding: 0 20px;
-
   margin: 50px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #c9a6755d;
+  background-color: var(--color-1);
   min-height: 300px;
 }
 
@@ -697,9 +716,17 @@
   display: flex;
   align-items: center;
   text-align: start;
-  background-color: #c9a6755d;
+  background-color: var(--color-1);
   min-height: 300px;
+  min-width: 370px;
 }
+
+/* @media screen and (max-width: 425px) {
+  .charitiesContainer {
+    min-width: 400px;
+  }
+} */
+
 
 /* scroller styles */
 

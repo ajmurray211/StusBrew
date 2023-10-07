@@ -1,7 +1,7 @@
 const Location = () => {
     return (
         <div className="infoContainer">
-            <div>
+            <div className="body">
                 See where Stus brews is going to be next. Currently we are mobile and mainly attend 
                 farmers markets.
             </div>
