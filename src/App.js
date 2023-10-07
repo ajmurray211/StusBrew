@@ -12,6 +12,7 @@ import { ProductContext } from './context/ProductContext';
 import { useContext } from 'react';
 import image from './Assets/images.jpg'
 import Success from './pages/Success';
+import NewsLetter from './components/NewsLetter';
 
 function App() {
   const { selectedProduct } = useContext(ProductContext);
@@ -30,7 +31,7 @@ function App() {
           <Route path="/details" element={selectedProduct === null ? <Home /> : <Details />} />
         </Routes>
       </div>
-      <Footer />
+      <NewsLetter/>
     </div>
   );
 }

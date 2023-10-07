@@ -568,6 +568,7 @@
 }
 
 #signUp {
+  border-radius: 35px;
   height: 4.8rem;
   cursor: pointer;
   position: relative;
@@ -577,6 +578,10 @@
   justify-content: center;
   align-items: center;
   border-radius: none;
+}
+
+.newsLetterMsg{
+  padding: 0 15px;
 }
 
 @media screen and (max-width: 425px) {
