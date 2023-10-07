@@ -41,7 +41,7 @@ const Home = () => {
 
             <div className="prodBackground">
                 <h1>Coffee Beans</h1>
-                <div className="prodContainer">
+                <div className="productContainer">
                     {mappedBeanBags}
                 </div>
                 <Button color='danger' size='lg'>
@@ -54,7 +54,7 @@ const Home = () => {
 
             <div className="prodBackground">
                 <h1>Stu's Styles</h1>
-                <div className="prodContainer">
+                <div className="productContainer">
                     {mappedMerchItems}
                 </div>
                 <Button color='danger' size='lg'>
