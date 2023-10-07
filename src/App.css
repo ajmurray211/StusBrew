@@ -148,96 +148,17 @@
 
 /* home styling */
 
-@keyframes easeInFromLeftAnimation {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.homeIconContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 15px 0;
+  flex-wrap: wrap;
 }
 
-.titleLink {
-  background-color: #fad018;
-  position: absolute;
-  right: -6px;
-  bottom: 12px;
-  cursor: pointer;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: all .3s ease-in-out;
-  color: #111;
-  font-size: 13px;
-  font-weight: 400;
-  font-style: normal;
-  height: auto;
-  line-height: 30px;
-  padding: 9px 30px;
-  border-radius: 0;
-}
-
-.announcment {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: opacity 0.3s ease-out, transform 0.7s ease-out;
-  animation: easeInFromLeftAnimation 1s ease-in-out;
-  width: 40%;
-  position: absolute;
-  top: 40%;
-  background-color: rgba(255, 255, 255, 0.855);
-  max-width: fit-content;
-}
-
-.announcment h2 {
-  margin-bottom: 20px;
-  padding-top: 20px;
-}
-
-.announcment p {
-  padding: 0 20px 72px 20px;
-}
-
-.carousel-item {
-  width: 100%;
-}
-
-.titleImgs {
-  margin: auto;
-  height: 80vh;
-  width: 90%;
-  background-size: cover;
-  background-position: center;
-  animation: zoomin 5s 1;
-  animation-fill-mode: forwards;
-}
-
-.titleImgs.active {
-  animation: zoomin 7s 1;
-  animation-fill-mode: forwards;
-}
-
-@keyframes zoomin {
-  from {
-    transform: scale(.97);
-  }
-
-  to {
-    transform: scale(1);
-  }
-}
-
-@media screen and (max-width: 425px) {
-
-  .hat-logo {
-    display: none;
-  }
-
-  #navbar {
-    position: sticky;
-    top: 0;
-  }
+.homeCoffeeSection,
+.homeMerchSection {
+  margin: 30px 0;
 }
 
 /* Merch styles */
@@ -567,6 +488,19 @@
   }
 }
 
+@media screen and (max-width: 425px) {
+
+  .hat-logo {
+    display: none;
+  }
+
+  #navbar {
+    position: sticky;
+    top: 0;
+  }
+}
+
+
 .navbar-toggler {
   width: 3rem;
   height: 3rem;
@@ -732,4 +666,86 @@
   text-align: start;
   background-color: #c9a6755d;
   min-height: 300px;
+}
+
+/* scroller styles */
+
+.titleLink {
+  background-color: #fad018;
+  position: absolute;
+  right: -6px;
+  bottom: 12px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all .3s ease-in-out;
+  color: #111;
+  font-size: 13px;
+  font-weight: 400;
+  font-style: normal;
+  height: auto;
+  line-height: 30px;
+  padding: 9px 30px;
+  border-radius: 0;
+}
+
+.announcment {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: opacity 0.3s ease-out, transform 0.7s ease-out;
+  animation: easeInFromLeftAnimation 1s ease-in-out;
+  width: 40%;
+  position: absolute;
+  top: 40%;
+  background-color: rgba(255, 255, 255, 0.855);
+  max-width: fit-content;
+}
+
+.announcment h2 {
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+.announcment p {
+  padding: 0 20px 72px 20px;
+}
+
+.carousel-item {
+  width: 100%;
+}
+
+.titleImgs {
+  margin: auto;
+  height: 80vh;
+  width: 90%;
+  background-size: cover;
+  background-position: center;
+  animation: zoomin 5s 1;
+  animation-fill-mode: forwards;
+}
+
+.titleImgs.active {
+  animation: zoomin 7s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoomin {
+  from {
+    transform: scale(.97);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes easeInFromLeftAnimation {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
