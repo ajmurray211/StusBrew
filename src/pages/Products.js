@@ -3,20 +3,22 @@ import { useDataFetcher } from "../hooks/useDataFetcher";
 import { CartContext } from "../context/CartContext";
 import { Button } from "reactstrap";
 import Icon from "../components/Icon";
+import { merch, beans } from '../data.js'
+import stus_hat from '../Assets/Merch/stus_hat.png'
 
 const Products = () => {
     const { API_URL } = useContext(CartContext)
     const [sectionSwitch, setSelectionSwitch] = useState('merch')
     const toggle = (e) => { setSelectionSwitch(e.target.name) }
-    const { getData: getBean, data: bean, error: beanError, loading: beanLoading } = useDataFetcher();
-    const { getData: getMerch, data: merch, error: merchError, loading: merchLoading } = useDataFetcher();
+    // const { getData: getBean, data: beans, error: beanError, loading: beanLoading } = useDataFetcher();
+    // const { getData: getMerch, data: merch, error: merchError, loading: merchLoading } = useDataFetcher();
 
     useEffect(() => {
-        getMerch(`${API_URL}merch`)
-        getBean(`${API_URL}bean`)
+        // getMerch(`${API_URL}merch`)
+        // getBean(`${API_URL}bean`)
     }, []);
 
-    const mappedbeanItems = bean.map((product) => {
+    const mappedbeanItems = beans.map((product) => {
         return (
             <Icon product={product} />
         )
@@ -37,7 +39,7 @@ const Products = () => {
                     <p>&</p>
                     <p>Beans</p>
                 </div> */}
-                <img id="welcomeImg" src="" />
+                <img id="welcomeImg" src={stus_hat} />
             </div>
             <div id="productsSection">
                 <div id="productSelectorContainer">

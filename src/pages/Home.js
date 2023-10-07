@@ -11,14 +11,15 @@ import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { CartContext } from '../context/CartContext';
 import { useDataFetcher } from '../hooks/useDataFetcher';
+import { merch, beans } from '../data.js'
 
 const Home = () => {
     const { API_URL } = useContext(CartContext)
-    const { getData: getMerch, data: merch, error: merchError, loading: merchLoading } = useDataFetcher();
-    const { getData: getBeans, data: beans, error: beanError, loading: beanLoading } = useDataFetcher();
+    // const { getData: getMerch, data: merch, error: merchError, loading: merchLoading } = useDataFetcher();
+    // const { getData: getBeans, data: beans, error: beanError, loading: beanLoading } = useDataFetcher();
     useEffect(() => {
-        getMerch(`${API_URL}merch`)
-        getBeans(`${API_URL}bean`)
+        // getMerch(`${API_URL}merch`)
+        // getBeans(`${API_URL}bean`)
     }, []);
 
     const mappedMerchItems = merch.map((product, i) => {

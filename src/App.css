@@ -227,7 +227,6 @@
   object-fit: cover;
   object-position: 50% 50%;
   border-radius: 35px;
-
 }
 
 #menuTitleImg2 {
@@ -335,11 +334,15 @@
 }
 
 #welcomeImg {
+  background-color: rgba(0, 0, 0, 0.485);
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 35px;
   width: 40vw;
   height: 30vw;
   background-color: var(--color-3);
   position: relative;
-  right: 8vw;
+  right: 10vw;
 }
 
 #productsSection {

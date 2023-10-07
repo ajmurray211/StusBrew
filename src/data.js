@@ -82,4 +82,168 @@ const questions = [
   },
 ];
 
-export { drinks, pastriesAndBakedGoods, sandwichesAndSnacks, questions }
+
+const merch = [
+  {
+    "productID": "M31",
+    "name": "Mug",
+    "variants": [
+      {
+        "color": "red",
+        "productImages": [
+          "75c4c005-b10a-44d3-9f44-f9a3748a690e.png"
+        ],
+        "sizeOptions": [
+          {
+            "name": "small",
+            "priceInCents": 1000,
+          },
+          {
+            "name": "medium",
+            "priceInCents": 1800,
+          }
+        ],
+      }
+    ],
+    "outOfStock": true,
+    "description": "Lorem ipsum dolor sit amet.",
+  },
+  {
+    "productID": "4",
+    "name": "Womans cropped longsleeve",
+    "variants": [
+      {
+        "color": "tan",
+        "productImages": [
+          "e8af6aa8-3037-470f-8d2c-4ec218c60432.png"
+        ],
+        "sizeOptions": [
+          {
+            "name": "small",
+            "priceInCents": 1000,
+          },
+          {
+            "name": "medium",
+            "priceInCents": 1800,
+          }
+        ],
+      }
+    ],
+    "outOfStock": true,
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, odit enim. Laborum debitis assumenda consequatur fugit.Natus perspiciatis fugit, non nihil vel praesentium omnis qui veritatis totam repudiandae placeat est.Ut facere magni ducimus pariatur dolorem at accusantium quibusdam, quam sequi nesciunt inventore fugiat beatae odiodignissimos asperiores dolore, a sit consequuntur delectus maxime molestiae officiis adipisci reiciendis! Fugit, sequi. Cupiditate consequuntur eos consectetur tempore quisquam tempora odit at ea, perferendis non deserunt atque autem harum nesciunt. Earum a, soluta magni similique excepturi mollitia debitis quae nisi dignissimos tempora. Sit!",
+  },
+  {
+    "productID": "ss1",
+    "name": "Sweatshirt",
+    "name": "Womans cropped longsleeve",
+    "variants": [
+      {
+        "color": "tan",
+        "productImages": [
+          "e8af6aa8-3037-470f-8d2c-4ec218c60432.png"
+        ],
+        "sizeOptions": [
+          {
+            "name": "small",
+            "priceInCents": 1000,
+          },
+          {
+            "name": "medium",
+            "priceInCents": 1800,
+          }
+        ],
+      }
+    ],
+    "outOfStock": true,
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, odit enim. Laborum debitis assumenda consequatur fugit.Natus perspiciatis fugit, non nihil vel praesentium omnis qui veritatis totam repudiandae placeat est.Ut facere magni ducimus pariatur dolorem at accusantium quibusdam, quam sequi nesciunt inventore fugiat beatae odiodignissimos asperiores dolore, a sit consequuntur delectus maxime molestiae officiis adipisci reiciendis! Fugit, sequi. Cupiditate consequuntur eos consectetur tempore quisquam tempora odit at ea, perferendis non deserunt atque autem harum nesciunt. Earum a, soluta magni similique excepturi mollitia debitis quae nisi dignissimos tempora. Sit!",
+  }
+]
+
+const beans = [
+  {
+    "name": "Signature",
+    "productId": "1",
+    "region": "South America",
+    "type": "Blend",
+    "variants": [
+      {
+        "productImages": [],
+        "sizeOptions": [
+          {
+            "name": "12 ounces",
+            "priceInCents": 800,
+          },
+          {
+            "name": "1 lb",
+            "priceInCents": 1500,
+          },
+          {
+            "name": "2 lbs",
+            "priceInCents": 2500,
+          }
+        ],
+      }
+    ],
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, odit enim. Laborum debitis assumenda consequatur fugit.Natus perspiciatis fugit, non nihil vel praesentium omnis qui veritatis totam repudiandae placeat est.Ut facere magni ducimus pariatur dolorem at accusantium quibusdam, quam sequi nesciunt inventore fugiat beatae odiodignissimos asperiores dolore, a sit consequuntur delectus maxime molestiae officiis adipisci reiciendis! Fugit, sequi. Cupiditate consequuntur eos consectetur tempore quisquam tempora odit at ea, perferendis non deserunt atque autem harum nesciunt. Earum a, soluta magni similique excepturi mollitia debitis quae nisi dignissimos tempora. Sit!",
+    "ingredients": "Beans",
+    "outOfStock": true,
+  },
+  {
+    "name": "Dark roast",
+    "productId": "2",
+    "region": "Huila Department, Colombia",
+    "type": "Blend",
+    "variants": [
+      {
+        "productImages": [],
+        "sizeOptions": [
+          {
+            "name": "12 ounces",
+            "priceInCents": 800,
+          },
+          {
+            "name": "1 lb",
+            "priceInCents": 1500,
+          },
+          {
+            "name": "2 lbs",
+            "priceInCents": 2500,
+          }
+        ],
+      }
+    ],
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, odit enim. Laborum debitis assumenda consequatur fugit.Natus perspiciatis fugit, non nihil vel praesentium omnis qui veritatis totam repudiandae placeat est.Ut facere magni ducimus pariatur dolorem at accusantium quibusdam, quam sequi nesciunt inventore fugiat beatae odiodignissimos asperiores dolore, a sit consequuntur delectus maxime molestiae officiis adipisci reiciendis! Fugit, sequi. Cupiditate consequuntur eos consectetur tempore quisquam tempora odit at ea, perferendis non deserunt atque autem harum nesciunt. Earum a, soluta magni similique excepturi mollitia debitis quae nisi dignissimos tempora. Sit!",
+    "ingredients": "Beans",
+    "outOfStock": true,
+  },
+  {
+    "name": "Medium roast, Caramel",
+    "productId": "3",
+    "region": "South America",
+    "type": "Blend",
+    "variants": [
+      {
+        "productImages": [],
+        "sizeOptions": [
+          {
+            "name": "12 ounces",
+            "priceInCents": 800,
+          },
+          {
+            "name": "1 lb",
+            "priceInCents": 1500,
+          },
+          {
+            "name": "2 lbs",
+            "priceInCents": 2500,
+          }
+        ],
+      }
+    ],
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, odit enim. Laborum debitis assumenda consequatur fugit.Natus perspiciatis fugit, non nihil vel praesentium omnis qui veritatis totam repudiandae placeat est.Ut facere magni ducimus pariatur dolorem at accusantium quibusdam, quam sequi nesciunt inventore fugiat beatae odiodignissimos asperiores dolore, a sit consequuntur delectus maxime molestiae officiis adipisci reiciendis! Fugit, sequi. Cupiditate consequuntur eos consectetur tempore quisquam tempora odit at ea, perferendis non deserunt atque autem harum nesciunt. Earum a, soluta magni similique excepturi mollitia debitis quae nisi dignissimos tempora. Sit!",
+    "ingredients": "Beans, caramel",
+    "outOfStock": true,
+  }
+]
+
+export { drinks, pastriesAndBakedGoods, sandwichesAndSnacks, questions, merch, beans }
