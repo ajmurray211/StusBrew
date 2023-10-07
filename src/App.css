@@ -401,13 +401,69 @@
   background-color: var(--color-1);
   display: flex;
   flex-wrap: wrap;
-  padding: 0 50px;
-  /* border-bottom: 2px solid black; */
+  padding: 0 1vw;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  border-bottom: 3px solid white;
 }
 
-.logo {
+.navTitleSection {
   display: flex;
   align-items: center;
+}
+
+#navProfileSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navSocialsContainer{
+  padding-left:  10px;
+  border-left: 1px solid black;
+}
+
+#navSelect {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.navLink {
+  color: black;
+  text-decoration: none;
+  padding: 15px;
+  font-weight: 600;
+  font-size: xx-large;
+}
+
+.btn a {
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  white-space: normal;
+  color: #fff;
+}
+
+.logo p {
+  font-size: 30px;
+  padding: 0;
+}
+
+/* Cart styles */
+
+#cartIcon {
+  width: 40px;
+  height: 50px;
+}
+
+.cartComponent {
+  margin-right: 10px;
+  padding-right:  10px;
+}
+
+.cartIconSection {
+  position: relative;
 }
 
 #itemsInCart {
@@ -425,57 +481,29 @@
   font-size: 12px;
 }
 
-#cartButton {
-  cursor: pointer;
+.popover .popover-arrow::after,
+.popover .popover-arrow::before {
+  top: -43px;
 }
 
-#profile svg {
-  width: 3rem;
-  height: 3rem;
+.popover {
+  margin-top: 50px;
+  min-width: 400px;
 }
 
-#navSelect {
+.cartFooter {
+  margin: 10px 0 0 0;
+  width: 100%;
   display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.navLink {
-  color: black;
-  text-decoration: none;
-  padding: 15px;
-  font-weight: 600;
-  font-size: xx-large;
-}
-
-.btn {
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  display: inline-block;
-  margin: 0;
-  width: auto;
-  line-height: 1.42;
-  cursor: pointer;
-  border: 2px solid transparent;
-  padding: 14px 22px;
-  min-width: 90px;
+.cartBtn {
+  width: fit-content;
+  height: 45px;
   border-radius: 35px;
-  background: #a11100;
-  transition: background .15s ease;
-}
-
-.btn a {
-  text-decoration: none;
-  text-align: center;
-  vertical-align: middle;
-  white-space: normal;
-  color: #fff;
-
-}
-
-.logo p {
-  font-size: 30px;
-  padding: 0;
+  background-color: var(--color-4);
 }
 
 @-webkit-keyframes zoomin {
@@ -498,12 +526,12 @@
     position: sticky;
     top: 0;
   }
-}
 
-
-.navbar-toggler {
-  width: 3rem;
-  height: 3rem;
+  .popover {
+    margin-top: 50px;
+    min-width: 270px;
+    padding-left: 10px;
+  }
 }
 
 /* footer styles */

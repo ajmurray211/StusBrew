@@ -1,6 +1,6 @@
-import { Button, Offcanvas, OffcanvasHeader, OffcanvasBody, NavbarToggler, Navbar } from 'reactstrap';
+import { Offcanvas, OffcanvasHeader, OffcanvasBody, NavbarToggler, Navbar } from 'reactstrap';
 import hat from '../Assets/hat-logo.png'
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { useState } from 'react';
 import Cart from './Cart';
@@ -33,12 +33,15 @@ const HamburgerNav = () => {
                     </div>
                 </OffcanvasBody>
             </Offcanvas>
-            <section className='logo'>
+            <section className='navTitleSection'>
                 <Link to="/"><img className="hat-logo" alt='stus logo' src={hat} /></Link>
-                <p>Stus Brew</p>
+                <p className='title'>Stus Brew</p>
             </section>
-            <section id='profile'>
+            <section id='navProfileSection'>
                 <Cart isOpen={isModalOpen} toggle={toggleModal} />
+                <div className='navSocialsContainer'>
+                    <a target="_blank" href="https://www.instagram.com/stus.brew/?utm_source=ig_embed&amp;utm_campaign=loading">{<InstagramIcon />}</a>
+                </div>
             </section>
         </Navbar>
     );

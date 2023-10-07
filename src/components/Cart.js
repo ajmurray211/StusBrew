@@ -25,28 +25,27 @@ const Cart = (props) => {
     ));
 
     return (
-        <div>
-            <div style={{ position: 'relative' }}>
-                <ShoppingCartIcon id="cartButton" onClick={props.toggle} />
+        <div className="cartComponent">
+            <div className="cartIconSection">
+                <ShoppingCartIcon id='cartIcon' onClick={props.toggle} />
                 {getCartItemCount() > 0 && (
                     <div id="itemsInCart">{getCartItemCount()}</div>
                 )}
             </div>
             <UncontrolledPopover
                 placement="left"
-                target="cartButton"
+                target="cartIcon"
+                id="cartDetailsSection"
             >
-                <PopoverHeader>
-                </PopoverHeader>
-                <PopoverBody>
-                    <div>
+                <PopoverBody className="cartBody">
+                    <div className="body">
                         {getCartItemCount() === 0 ? 'Your cart is empty' : mappedCartItems}
                     </div>
-                    <div>
-                        <Button id="cart" color="secondary" onClick={handleCheckout}>
+                    <div className="cartFooter">
+                        <Button className="cartBtn body" color="secondary" onClick={handleCheckout}>
                             Check Out
                         </Button>
-                        <Button color="secondary" onClick={() => {
+                        <Button className="cartBtn body" color="secondary" onClick={() => {
                             clearCart();
                             props.toggle();
                         }}>

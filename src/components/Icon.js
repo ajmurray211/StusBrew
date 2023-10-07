@@ -10,7 +10,6 @@ const Icon = (props) => {
 
   const handleClick = () => {
     setSelectedProduct(props.product);
-    console.log(selectedProduct)
   };
 
   // Perform checks before accessing properties
@@ -18,8 +17,6 @@ const Icon = (props) => {
   const sizeOptions = variants[0]?.sizeOptions || [];
   const startingPrice = sizeOptions[0]?.priceInCents ? sizeOptions[0].priceInCents / 100 : 0;
   const imgs = variants[0] ? variants[0].productImages : []
-
-  console.log(props.product.outOfStock)
 
   return (
     <Link
