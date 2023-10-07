@@ -5,13 +5,12 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Button } from 'reactstrap';
 import NewsLetter from '../components/NewsLetter';
 import Icon from '../components/Icon';
-import { mainImgs } from '../productData.js'
 import { Link } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { CartContext } from '../context/CartContext';
 import { useDataFetcher } from '../hooks/useDataFetcher';
-import { merch, beans } from '../data.js'
+import { merch, beans, mainImgs } from '../data.js'
 
 const Home = () => {
     const { API_URL } = useContext(CartContext)
