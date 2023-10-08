@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a2f0fc37.css",
-    "main.js": "/static/js/main.ef4789e7.js",
+    "main.css": "/static/css/main.05407e0d.css",
+    "main.js": "/static/js/main.a35a5342.js",
     "static/js/787.67ea8a59.chunk.js": "/static/js/787.67ea8a59.chunk.js",
     "static/media/doughnuts.png": "/static/media/doughnuts.c993d04cf0201e60b09d.png",
     "static/media/smorescookies.png": "/static/media/smorescookies.fe89cef1148f7163ee03.png",
@@ -14,12 +14,12 @@
     "static/media/hat-logo.png": "/static/media/hat-logo.e4c70f3126cc6ed43161.png",
     "static/media/images.jpg": "/static/media/images.9337d824aa9c7c9d503b.jpg",
     "index.html": "/index.html",
-    "main.a2f0fc37.css.map": "/static/css/main.a2f0fc37.css.map",
-    "main.ef4789e7.js.map": "/static/js/main.ef4789e7.js.map",
+    "main.05407e0d.css.map": "/static/css/main.05407e0d.css.map",
+    "main.a35a5342.js.map": "/static/js/main.a35a5342.js.map",
     "787.67ea8a59.chunk.js.map": "/static/js/787.67ea8a59.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a2f0fc37.css",
-    "static/js/main.ef4789e7.js"
+    "static/css/main.05407e0d.css",
+    "static/js/main.a35a5342.js"
   ]
 }
