@@ -1,8 +1,7 @@
 /* ################################## Global styles ################################## */
 
 :root {
-  --color-1: #f5f5db;
-  /* Pale Beige */
+  --color-1: #fad018;
   --color-2: #6495ED;
   /* Soft Blue */
   --color-3: #d3d3d3;
@@ -11,6 +10,8 @@
   /* Sage Green */
   --color-5: #d8bfd8;
   /* Dusty Rose */
+  --color-6: #f5f5db;
+  /* Pale Beige */
   --font-1: 'Playfair Display', serif;
   --font-2: 'Lato', sans-serif;
 }
@@ -20,6 +21,7 @@
 }
 
 .title {
+  color: black;
   font-size: 40px;
   font-family: var(--font-1)
 }
@@ -575,7 +577,7 @@
 
 #newsLetter {
   padding: 40px 0;
-  background-color: beige;
+  background-color: var(--color-1);
 }
 
 #inputContainer {
