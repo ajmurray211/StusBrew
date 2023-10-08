@@ -17,7 +17,7 @@ const HamburgerNav = () => {
             <NavbarToggler onClick={toggle} />
             <Offcanvas isOpen={isOpen} toggle={toggle}>
                 <OffcanvasHeader toggle={toggle}>
-                    Stus Brew
+                    Stu’s Bake n’ Brew
                 </OffcanvasHeader>
                 <OffcanvasBody id='navSelect'>
                     <Link className='navLink' onClick={toggle} to='/'>Home</Link>
@@ -26,7 +26,7 @@ const HamburgerNav = () => {
                     <Link className='navLink' onClick={toggle} to='/faq'>FAQ's</Link>
                     <Link className='navLink' onClick={toggle} to='/about'>About</Link>
                     <div className='navFooter'>
-                        <div>©2019, Stus Brew</div>
+                        <div>©2019, Stu’s Bake n’ Brew</div>
                         <section id="socials">
                             <a target="_blank" href="https://www.instagram.com/stus.brew/?utm_source=ig_embed&amp;utm_campaign=loading">{<InstagramIcon />}</a>
                         </section>
@@ -35,7 +35,7 @@ const HamburgerNav = () => {
             </Offcanvas>
             <section className='navTitleSection'>
                 <Link to="/"><img className="hat-logo" alt='stus logo' src={hat} /></Link>
-                <p className='title'>Stus Brew</p>
+                <p className='title '>Stu’s Bake n’ Brew</p>
             </section>
             <section id='navProfileSection'>
                 <Cart isOpen={isModalOpen} toggle={toggleModal} />

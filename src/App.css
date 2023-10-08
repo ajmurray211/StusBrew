@@ -475,6 +475,15 @@
   padding: 0;
 }
 
+@media screen and (max-width: 425px) {
+
+  .navTitleSection {
+    width: 60%;
+    font-size: 15px;
+  }
+
+}
+
 /* Cart styles */
 
 #cartIcon {
