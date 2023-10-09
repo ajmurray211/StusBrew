@@ -1,9 +1,9 @@
 /* ################################## Global styles ################################## */
 
 :root {
-  --color-1: #fad018;
-  --color-2: #6495ED;
+  --color-1: #6494ed32;
   /* Soft Blue */
+  --color-2: #fad018;
   --color-3: #d3d3d3;
   /* Pale Gray */
   --color-4: #8fbc8f;
@@ -21,13 +21,12 @@
 }
 
 .title {
-  color: black;
   font-size: 40px;
   font-family: var(--font-1)
 }
 
 .body {
-  font-size: 18px;
+  font-size: 20px;
   font-family: var(--font-2);
 }
 
@@ -421,9 +420,9 @@
 }
 
 #navbar {
-  height: 15vh;
+  min-height: 15vh;
   width: 100%;
-  background-color: var(--color-1);
+  background-color: var(--color-2);
   display: flex;
   flex-wrap: wrap;
   padding: 0 1vw;
@@ -475,7 +474,7 @@
   padding: 0;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 600px) {
 
   .navTitleSection {
     width: 60%;
@@ -673,7 +672,7 @@
   transform: scale(1.1);
 }
 
-.iconContainer img {
+.iconProductImage {
   transition: transform 0.3s ease-out;
   max-width: 25rem;
   width: 70%;
@@ -706,6 +705,11 @@
   width: fit-content;
 }
 
+.outOfStockImg{
+  border-radius: 25px;
+  max-width: 90%;
+}
+
 .disabled-link {
   pointer-events: none;
 }
@@ -733,6 +737,10 @@
   background-color: var(--color-1);
   min-height: 300px;
   min-width: 370px;
+}
+
+.charatiesLink{
+  color: black;
 }
 
 /* @media screen and (max-width: 425px) {
