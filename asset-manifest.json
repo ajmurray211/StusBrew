@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4ab0287e.css",
-    "main.js": "/static/js/main.eabcda3b.js",
+    "main.css": "/static/css/main.3c410c3a.css",
+    "main.js": "/static/js/main.1f28da27.js",
     "static/js/787.67ea8a59.chunk.js": "/static/js/787.67ea8a59.chunk.js",
     "static/media/doughnuts.png": "/static/media/doughnuts.c993d04cf0201e60b09d.png",
     "static/media/smorescookies.png": "/static/media/smorescookies.fe89cef1148f7163ee03.png",
@@ -10,16 +10,18 @@
     "static/media/eggs-flour.png": "/static/media/eggs-flour.c2e52dc5b16392aae735.png",
     "static/media/bagles.jpeg": "/static/media/bagles.918da34fb508684444c9.jpeg",
     "static/media/cup-beans2.png": "/static/media/cup-beans2.3fbc1daea46967a8edf6.png",
+    "static/media/greenCheck.png": "/static/media/greenCheck.1d30891a1e8eb1eb1c8a.png",
+    "static/media/outOfStockBanner.png": "/static/media/outOfStockBanner.ab7813629e3da3ba8884.png",
     "static/media/stu.jpeg": "/static/media/stu.99c2f877d201ac77a6c0.jpeg",
     "static/media/hat-logo.png": "/static/media/hat-logo.e4c70f3126cc6ed43161.png",
     "static/media/images.jpg": "/static/media/images.9337d824aa9c7c9d503b.jpg",
     "index.html": "/index.html",
-    "main.4ab0287e.css.map": "/static/css/main.4ab0287e.css.map",
-    "main.eabcda3b.js.map": "/static/js/main.eabcda3b.js.map",
+    "main.3c410c3a.css.map": "/static/css/main.3c410c3a.css.map",
+    "main.1f28da27.js.map": "/static/js/main.1f28da27.js.map",
     "787.67ea8a59.chunk.js.map": "/static/js/787.67ea8a59.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ab0287e.css",
-    "static/js/main.eabcda3b.js"
+    "static/css/main.3c410c3a.css",
+    "static/js/main.1f28da27.js"
   ]
 }
