@@ -22,7 +22,7 @@ const NewsLetter = () => {
     return (
         <div id="newsLetter">
             <h1 className="title">Join the Stu-dio</h1>
-            <p className="body newsLetterMsg">Stay connected with whats new at Stu's. Discounts, Products, and News!</p>
+            <p className="body newsLetterMsg">Stay connected with what's new at Stu's. Discounts, Products, and News!</p>
             <div id="inputContainer">
                 <Input
                     className="body"

@@ -2,6 +2,7 @@ const Charities = () => {
     return (
         <div className="charitiesContainer">
             <div>
+                <div className="charatiesTitle title">Charaties We Support</div>
                 <ul className="body">
                     <li className="">
                         <a className="charatiesLink" href="https://stopsoldiersuicide.org/" target="_blank">

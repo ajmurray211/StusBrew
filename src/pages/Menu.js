@@ -1,6 +1,6 @@
 import drink from '../Assets/cup-beans2.png'
 import food from '../Assets/bagles.jpeg'
-import {drinks, pastriesAndBakedGoods} from "../data";
+import { drinks, pastriesAndBakedGoods } from "../data";
 
 const Menu = () => {
 
@@ -9,7 +9,7 @@ const Menu = () => {
 
     return (
         <div id="menuPage">
-            <div id="menuWelcomeSection" className=''>
+            {/* <div id="menuWelcomeSection" className=''>
                 <div className="menuWelcome1Grid ">
                     <div id="menuFlex1">
                         <img id="menuTitleImg1" src={drink} />
@@ -21,8 +21,8 @@ const Menu = () => {
                     </div>
                 </div>
                 <img id="menuTitleImg2" src={food} />
-            </div>
-
+            </div> */}
+            <div className='menuTitle title'>Menu</div>
             <div id="menuFoodSection" className="">
                 <div className="title menuTitleSection">Food</div>
                 <div className="body menuOptions">{mappedDrinks}</div>

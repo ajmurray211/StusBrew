@@ -14,13 +14,10 @@ const drinks = [
 ];
 
 const pastriesAndBakedGoods = [
-  { name: "Croissants", types: ["Plain", "Chocolate", "Almond"] },
-  { name: "Muffins", types: ["Blueberry", "Banana Nut", "Chocolate Chip"] },
-  { name: "Bagels", types: ["with Cream Cheese", "Jam", "As Sandwiches"] },
-  { name: "Cookies", types: ["Chocolate Chip", "Oatmeal Raisin", "Sugar"] },
-  { name: "Brownies", types: [] },
-  { name: "Coffee Cake", types: [] },
-  { name: "Donuts", types: [] },
+  { name: "Chocolate chip banana bread", types: [] },
+  { name: "Carrot cake ", types: [] },
+  { name: "Bagels", types: [] },
+  { name: "Cookies", types: [] },
 ];
 
 const sandwichesAndSnacks = [
@@ -97,7 +94,6 @@ const merch = [
       {
         "color": "red",
         "productImages": [
-          "75c4c005-b10a-44d3-9f44-f9a3748a690e.png"
         ],
         "sizeOptions": [
           {
@@ -121,7 +117,6 @@ const merch = [
       {
         "color": "tan",
         "productImages": [
-          "e8af6aa8-3037-470f-8d2c-4ec218c60432.png"
         ],
         "sizeOptions": [
           {
@@ -146,7 +141,6 @@ const merch = [
       {
         "color": "tan",
         "productImages": [
-          "e8af6aa8-3037-470f-8d2c-4ec218c60432.png"
         ],
         "sizeOptions": [
           {
@@ -252,7 +246,6 @@ const beans = [
   }
 ]
 
-
 const mainImgs = [
   {
     src: eggsFlour,
@@ -286,9 +279,9 @@ const mainImgs = [
 
     announcment: {
       to: 'products',
-      title: 'Checkout our current Merch!',
+      title: 'We can ship merch!',
       button: 'Learn more',
-      message: 'Find the hottest stus styles on the block.'
+      message: 'Shop Stu’s latest styles'
     },
   },
   {
@@ -302,6 +295,5 @@ const mainImgs = [
     ,
   },
 ];
-
 
 export { drinks, pastriesAndBakedGoods, sandwichesAndSnacks, questions, merch, beans, mainImgs }
