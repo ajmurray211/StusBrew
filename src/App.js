@@ -4,6 +4,7 @@ import About from './pages/About.js';
 import { Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer.js';
 import HamburgerNav from './components/HamburgerNav.js';
+import Nav from './components/Nav.js';
 import Details from './pages/Details';
 import Faq from './pages/Faq'
 import Menu from './pages/Menu'
@@ -19,7 +20,8 @@ function App() {
 
   return (
     <div className="App">
-      <HamburgerNav />
+      {/* <HamburgerNav /> */}
+      <Nav/>
       <div>
         <Routes>
           <Route path='/' element={<Home />}></Route>
