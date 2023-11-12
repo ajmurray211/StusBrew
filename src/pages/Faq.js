@@ -1,6 +1,6 @@
 import { Button } from "reactstrap";
 import { questions } from "../data.js";
-import logo from '../Assets/hat-logo.png'
+import logo from '../Assets/hat.png'
 
 const Faq = () => {
 

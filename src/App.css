@@ -582,53 +582,74 @@
 }
 
 /* footer styles */
-.navFooter {
+.footer {
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  border-top: 1px solid black;
+  justify-content: space-around;
+  text-align: left;
+  padding: 50px 100px;
+}
+
+.footerSocialsSection {
+  width: 45%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.footerInfoSection {
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footerTitle {
+  font-size: 20px;
+  font-family: var(--font-1);
+  font-weight: 600;
+}
+
+.footerBody {
+  font-size: 12px;
+  font-family: var(--font-2);
+}
+
+.footerIcon {
+  height: 24px;
+  width: 24px;
 }
 
 #socialsContainer {
   font-size: large;
   height: 10vh;
-  display: flex;
-  justify-content: space-evenly;
   align-items: center;
-}
-
-/* newsLetter styles */
-
-#newsLetter {
-  padding: 40px 0;
-  background-color: var(--color-1);
+  display: flex;
+  gap: 15px;
 }
 
 #inputContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#emailInput {
-  width: 60%;
-  height: 5rem;
-  border-radius: 35px;
 }
 
 #signUp {
-  border-radius: 35px;
-  height: 4.8rem;
+  height: 95%;
   cursor: pointer;
   position: relative;
-  right: 90px;
+  top: 3px;
+  right: 45px;
   background-color: white;
   display: flex;
-  justify-content: center;
   align-items: center;
-  border-radius: none;
+}
+
+#signUpIcon{
+  height: 16px;
+  width: 16px;
 }
 
 .newsLetterMsg {
-  padding: 0 15px;
+  padding: 15px 0px;
 }
 
 @media screen and (max-width: 425px) {

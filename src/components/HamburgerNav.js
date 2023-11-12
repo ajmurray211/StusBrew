@@ -1,5 +1,4 @@
 import { Offcanvas, OffcanvasHeader, OffcanvasBody, NavbarToggler, Navbar } from 'reactstrap';
-import hat from '../Assets/hat-logo.png'
 import { Link } from 'react-router-dom';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { useState } from 'react';
@@ -34,7 +33,7 @@ const HamburgerNav = () => {
                 </OffcanvasBody>
             </Offcanvas>
             <section className='navTitleSection'>
-                <Link to="/"><img className="hat-logo" alt='stus logo' src={hat} /></Link>
+                <Link to="/"><img className="hat-logo" alt='stus logo' src='' /></Link>
                 <p className='title '>Stu’s Bake n’ Brew</p>
             </section>
             <section id='navProfileSection'>
