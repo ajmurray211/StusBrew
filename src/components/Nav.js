@@ -17,19 +17,18 @@ const Nav = () => {
 
     return (
         <Navbar sticky='top' id='navbar'>
-            <div></div>
-            <div></div>
-            <div className='navLinkContainer'>
+            <div className='navLinkContainer navContainer'>
                 <Dropdown isOpen={isOpen} toggle={toggle} direction='down'>
                     <DropdownToggle id='navDropdown' className='navLink' caret>Menu</DropdownToggle>
                     <DropdownMenu>
                         <DropdownItem><Link className='navLink' onClick={toggle} to='/'>Coffee Beans</Link></DropdownItem>
-                        <DropdownItem><Link className='navLink' onClick={toggle} to='/'>Bakery</Link></DropdownItem>
+                        <DropdownItem divider />
+                        <DropdownItem ><Link className='navLink' onClick={toggle} to='/'>Bakery</Link></DropdownItem>
                     </DropdownMenu>
                 </Dropdown>
                 <Link className='navLink' onClick={toggle} to='/products'>Shop</Link>
             </div>
-            <div className='navTitleContainer'>
+            <div className='navTitleContainer navContainer'>
                 <Link to="/"><img className="hat-logo" alt='stus logo' src={hat} /></Link>
                 <p className='navTitle'>Stu's Brew</p>
                 <div className='navTitleInfo'>
@@ -37,11 +36,11 @@ const Nav = () => {
                     <p>est. 2023</p>
                 </div>
             </div>
-            <div className='navLinkContainer'>
+            <div className='navLinkContainer navContainer'>
                 <Link className='navLink' onClick={toggle} to='/menu'>Contact</Link>
                 <Link className='navLink' onClick={toggle} to='/about'>About</Link>
             </div>
-            <div className='navIconContainer'>
+            <div className='navIconContainer navContainer'>
                 <Link to="/"><img className="navIcon" alt='search icon' src={searchIcon} /></Link>
                 <Link to="/"><img className="navIcon" alt='user icon' src={userIcon} /></Link>
                 <Link to="/"><img className="navIcon" alt='liked icon' src={likedIcon} /></Link>
