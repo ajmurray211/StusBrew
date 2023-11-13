@@ -497,6 +497,59 @@
 
 }
 
+/* Loading icon styles */
+.loadingIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes waveAnimation {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: -30px;
+  }
+}
+
+.waveContainer {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.wave1,
+.wave2 {
+  animation: waveAnimation 9s linear infinite;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: -30;
+  height: 200%;
+}
+
+.inverse {
+  color: white;
+}
+
+.coffeeCup {
+  background-attachment: fixed;
+  height: 190px;
+  z-index: 999;
+  filter: invert(100%);
+}
+
+.loadingMsgContainer {
+  color: grey;
+  margin: 20px 0 0 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
+
 /* Cart styles */
 
 #cartIcon {

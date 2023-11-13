@@ -11,6 +11,7 @@ import axios from 'axios';
 import { CartContext } from '../context/CartContext';
 import { useDataFetcher } from '../hooks/useDataFetcher';
 import { merch, beans, mainImgs } from '../data.js'
+import LoadingIcon from '../components/LoadingIcon';
 
 const Home = () => {
     const { API_URL } = useContext(CartContext)
