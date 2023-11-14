@@ -1,5 +1,5 @@
 import { Offcanvas, OffcanvasHeader, OffcanvasBody, NavbarToggler, Navbar, Dropdown, DropdownMenu, DropdownToggle, DropdownItem } from 'reactstrap';
-import hat from '../Assets/hat.png'
+import stusTitle from '../Assets/stusTitle.png'
 import userIcon from '../Assets/userIcon.png'
 import bagIcon from '../Assets/bagIcon.png'
 import likedIcon from '../Assets/likedIcon.png'
@@ -28,13 +28,8 @@ const Nav = () => {
                 </Dropdown>
                 <Link className='navLink' onClick={toggle} to='/products'>Shop</Link>
             </div>
-            <div className='navTitleContainer navContainer'>
-                <Link to="/"><img className="hat-logo" alt='stus logo' src={hat} /></Link>
-                <p className='navTitle'>Stu's Brew</p>
-                <div className='navTitleInfo'>
-                    <p>Craft Coffee</p>
-                    <p>est. 2023</p>
-                </div>
+            <div className='navTitleLogo'>
+                <Link to="/"><img className="navTitleLogo" alt='stus logo' src={stusTitle} /></Link>
             </div>
             <div className='navLinkContainer navContainer'>
                 <Link className='navLink' onClick={toggle} to='/menu'>Contact</Link>
