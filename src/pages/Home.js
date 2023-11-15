@@ -12,6 +12,7 @@ import hf2 from '../Assets/hf2.jpg'
 import hf3 from '../Assets/hf3.jpg'
 import hf4 from '../Assets/hf4.jpg'
 import hf5 from '../Assets/hf5.jpg'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const { API_URL } = useContext(CartContext)
@@ -45,14 +46,16 @@ const Home = () => {
                     <img className='hc6' src={stusCupLogo} />
                 </div>
                 <div style={{ gridRow: 'span 2' }} className='bordered'>
-                    <div className='hc5'>
-                        <p className='hc5t'>Baked Goods</p>
-                    </div>
+                    <Link to={'/menu'}>
+                        <div className='hc5'>
+                            <p className='hc5t'>Baked Goods</p>
+                        </div>
+                    </Link>
                 </div>
             </div>
             <div className='homeFollowSection'>
                 <div>
-                    <p className='homeFollowTxt'>FOLLOW US <img className='homeLinkArrow' src={arrowUpRightBlack} /></p>
+                    <p className='homeFollowTxt'>FOLLOW US<img className='homeLinkArrow' src={arrowUpRightBlack} /></p>
                 </div>
                 <div className='homeImgContainer'>
                     <div className='homeFollowImg' style={{ backgroundImage: `url(${hf1})` }} />
@@ -60,7 +63,6 @@ const Home = () => {
                     <div className='homeFollowImg' style={{ backgroundImage: `url(${hf3})` }} />
                     <div className='homeFollowImg' style={{ backgroundImage: `url(${hf4})` }} />
                     <div className='homeFollowImg' style={{ backgroundImage: `url(${hf5})` }} />
-
                 </div>
             </div>
         </div >

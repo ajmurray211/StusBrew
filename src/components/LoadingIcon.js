@@ -18,7 +18,7 @@ const LoadingIcon = (props) => {
         <img className="inverse coffeeCup" src={coffeeCup} alt="coffee cup" />
       </div>
       <div className="loadingMsgContainer">
-        <p> Coffee filling a loading Icon</p>
+        <p>Lets Get To Brewin'</p>
       </div>
     </div>
   );

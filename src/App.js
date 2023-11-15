@@ -13,6 +13,7 @@ import { ProductContext } from './context/ProductContext';
 import { useContext } from 'react';
 import image from './Assets/images.jpg'
 import Success from './pages/Success';
+import MenuItem from './pages/MenuItem';
 
 function App() {
   const { selectedProduct } = useContext(ProductContext);
@@ -20,19 +21,19 @@ function App() {
   return (
     <div className="App">
       {/* <HamburgerNav /> */}
-      <Nav/>
+      <Nav />
       <div>
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/about' element={<About />}></Route>
-          <Route path='/products' element={<Products />}></Route>
+          <Route path='/menuItem/:id' element={<MenuItem />}></Route>
           <Route path='/menu' element={<Menu />}></Route>
           <Route path='/faq' element={<Faq />}></Route>
           <Route path='/success' element={<Success />}></Route>
           <Route path="/details" element={selectedProduct === null ? <Home /> : <Details />} />
         </Routes>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

@@ -142,7 +142,7 @@
   }
 }
 
-/* About  styles */
+/* About styles */
 
 .aboutMsg {
   margin: 20px;
@@ -418,7 +418,8 @@
   /* 120.833% */
 }
 
-.mc2, .mc3 {
+.mc2,
+.mc3 {
   display: flex;
   align-items: center;
   height: 50%;
@@ -463,9 +464,17 @@
 }
 
 .menuOption {
-  width: 273px;
+  width: 300px;
   padding: 30px;
   text-align: left;
+}
+
+.menuOptionLink {
+  text-decoration: none;
+}
+
+.menuOption:hover {
+  cursor: pointer;
 }
 
 .menuOptionTitle {
@@ -476,12 +485,72 @@
   font-weight: 400;
 }
 
+.menuOption:hover .menuOptionTitle {
+  font-weight: 900;
+}
+
 .menuOptionDescription {
   color: var(--foundation-blue-dark-hover, #2B5584);
   font-family: Urbanist;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
+}
+
+.menuCharaties {
+  height: 585px;
+  background: var(--foundation-blue-light-active, #C6DCF4);
+}
+
+.menuCharatiesTxt {
+  color: #FFF;
+  font-family: Montserrat, sans-serif;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 86%;
+  text-transform: capitalize;
+  width: 734px;
+  height: 208px;
+  text-align: left;
+  padding: 50px;
+}
+
+.menuLinkArrow {
+  height: 96px;
+  width: 96px;
+  color: #000;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.menuImgContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+}
+
+.menuFollowImg {
+  width: 260px;
+  height: 262px;
+  border-radius: 12px;
+  background-position: center;
+  background-size: cover;
+}
+
+.menuFollowTxt {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 25px 50px;
+  margin: 150px 0 50px 0;
+  text-align: left;
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: capitalize;
 }
 
 /* Products styles */
@@ -584,6 +653,128 @@
 
 #faqLogo {
   width: 150px;
+}
+
+/* menuItem styles */
+.menuItemSection {
+  margin-bottom: 50px;
+  border-bottom: 1px solid black;
+}
+
+.menuItemPath {
+  text-align: left;
+  padding-left: 90px;
+  color: var(--foundation-blue-normal-hover, #4080C6);
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 95px;
+  text-transform: capitalize;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.menuItemGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+}
+
+.mic1 {}
+
+.menuItemImg {
+  width: 624px;
+  height: 697px;
+  flex-shrink: 0;
+  background: lightgray 50% / cover no-repeat;
+  margin: 20% auto;
+}
+
+.mic2 {
+  border-left: 1px solid black;
+}
+
+.menuItemTitle {
+  color: var(--foundation-blue-dark, #356BA5);
+  font-family: Montserrat, sans-serif;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 95px;
+  letter-spacing: -8px;
+  text-transform: capitalize;
+}
+
+.menuItemPriceContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
+}
+
+.menuItemPrice {
+  color: var(--foundation-blue-dark, #356BA5);
+  font-family: Montserrat, sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 95px;
+  text-transform: capitalize;
+}
+
+.menuItemAddToCart {
+  border: 1px solid var(--foundation-blue-normal, #478EDC);
+  color: var(--foundation-blue-normal, #478EDC);
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 180%;
+  text-transform: capitalize;
+  display: flex;
+  width: 202px;
+  height: 48px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.menuItemDescription {
+  text-align: left;
+  margin: 50px;
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 180%;
+  text-transform: capitalize;
+}
+
+.mic3 {
+  border-top: 1px solid black;
+}
+
+.menuItemDropdowns {
+  margin: 50px;
+}
+
+.mic4 {
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+
+}
+
+.menuItemLogo {
+  width: 500px;
+  height: 500px;
+  flex-shrink: 0;
 }
 
 /* ################################## Component styles ################################## */
