@@ -14,7 +14,7 @@
   --pb-n: #478edc;
   --pb-n-hover: #4080c6;
   --pb-n-active: #3972b0;
-  --pb-d: #356ba5;
+  --foundation-blue-dark: #356ba5;
   --pb-d-hover: #2b5584;
   --pb-d-active: #204063;
   --pb-darker: #19324d;
@@ -23,6 +23,7 @@
   /* --font-1: 'Dancing Script', cursive; */
   --font-2: 'Young Serif', serif;
   --font-3: 'Satisfy', cursive;
+  --font-4: 'Urbanist';
 }
 
 .tempBackground {
@@ -356,108 +357,131 @@
 
 /* Menu Styles */
 
-#menuPage {
-  display: flex;
-  flex-direction: column;
+#menuPage {}
+
+.menuSection {
+  width: 80%;
+  margin: 57px auto;
 }
 
 .menuTitle {
-  font-size: 96px;
+  margin-bottom: 25px;
+  padding: 76px 0;
+  color: var(--foundation-blue-dark, #356BA5);
+  font-family: Montserrat;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 95px;
+  letter-spacing: -8px;
+  text-transform: capitalize;
+  border-bottom: 1px solid var(--foundation-blue-dark);
 }
 
-#menuWelcomeSection {
-  background-color: var(--color-1);
-  margin: 20px;
+.menuGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.mc1 {
   display: flex;
-  padding: 2vw;
-  padding-left: 6vw;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: left;
-  min-height: 100%;
-}
-
-#menuTitleImg1 {
-  background-color: rgba(0, 0, 0, 0.485);
-  width: 50vw;
-  height: 30vw;
-  margin-left: 3vw;
-  object-fit: cover;
-  object-position: 50% 50%;
-  border-radius: 35px;
-}
-
-#menuTitleImg2 {
-  position: absolute;
-  right: 15vw;
-  background-color: rgba(0, 128, 0, 0.356);
-  width: 30vw;
-  height: 45vw;
-  object-fit: cover;
-  object-position: 50% 50%;
-  border-radius: 35px;
-}
-
-#menuFlex1 {
-  display: flex;
-  flex-direction: column;
-}
-
-#menuWelcomMsg {
-  align-self: flex-start;
-}
-
-#mm2 {
-  margin-left: 10vw;
-}
-
-#mm3 {
-  margin-left: 20vw;
-}
-
-.menuOptions {
-  margin: 0 10vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
+  padding: 50px 0;
+  border-right: 1px solid var(--foundation-blue-dark);
+  border-top: 1px solid var(--foundation-blue-dark);
+}
+
+.menuLogoContianer {
+  display: flex;
+  align-items: center;
+}
+
+.menuLogo {
+  height: 196px;
+  width: 196px;
+}
+
+.menuLogoTxt {
+  display: flex;
+  width: 121px;
+  height: 126px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--foundation-blue-dark, #356BA5);
+  text-align: center;
+  font-family: Urbanist, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+  /* 120.833% */
+}
+
+.mc2, .mc3 {
+  display: flex;
+  align-items: center;
+  height: 50%;
+  border-top: 1px solid var(--foundation-blue-dark);
+}
+
+.menuFooter {
+  color: var(--foundation-blue-dark-hover, #2B5584);
+  font-family: var(--font-4);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 95px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--foundation-blue-dark);
+}
+
+.menuBorder {
+  border: 1px solid var(--foundation-blue-dark-hover, #2B5584);
+  background: #FBFBFB;
+}
+
+.menuOptionsContainer {
+  list-style: none;
+}
+
+.menuSectionTitle {
+  max-height: 100px;
+  color: var(--foundation-blue-dark, #356BA5);
+  font-family: var(--font-4);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 95px;
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+  width: fit-content;
+  height: fit-content;
 }
 
 .menuOption {
-  display: flex;
-  min-width: 150px;
-  margin: 10px;
-  width: 25%;
-  padding: 10px;
-  align-items: center;
-  justify-content: center;
+  width: 273px;
+  padding: 30px;
+  text-align: left;
 }
 
-.menuTitleSection {
-  margin-bottom: 40px;
+.menuOptionTitle {
+  color: var(--foundation-blue-dark-hover, #2B5584);
+  font-family: Urbanist;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
 }
 
-#menuDisclaimerSection {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
-}
-
-#menuFoodSection,
-#menuDrinkSection {
-  margin: 30px 0;
-}
-
-@media screen and (max-width: 600px) {
-  .menuOptions {
-    align-items: center;
-    justify-content: center;
-    margin: 0 30vw;
-  }
+.menuOptionDescription {
+  color: var(--foundation-blue-dark-hover, #2B5584);
+  font-family: Urbanist;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 /* Products styles */

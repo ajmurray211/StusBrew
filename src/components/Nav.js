@@ -13,17 +13,17 @@ const Nav = () => {
     const toggle = () => setIsOpen(!isOpen)
 
     const [isModalOpen, setIsModalpen] = useState()
-    const toggleModal = () => setIsModalpen(!isModalOpen)
+    const toggleModal = () => setIsModalpen(!isModalOpen) 
 
     return (
         <Navbar sticky='top' id='navbar'>
             <div className='navLinkContainer navContainer'>
                 <Dropdown isOpen={isOpen} toggle={toggle} direction='down'>
                     <DropdownToggle id='navDropdown' className='navLink' caret>Menu</DropdownToggle>
-                    <DropdownMenu>
+                    <DropdownMenu> 
                         <DropdownItem><Link className='navLink' onClick={toggle} to='/'>Coffee Beans</Link></DropdownItem>
                         <DropdownItem divider />
-                        <DropdownItem ><Link className='navLink' onClick={toggle} to='/'>Bakery</Link></DropdownItem>
+                        <DropdownItem ><Link className='navLink' onClick={toggle} to='/menu'>Bakery</Link></DropdownItem>
                     </DropdownMenu>
                 </Dropdown>
                 <Link className='navLink' onClick={toggle} to='/products'>Shop</Link>
