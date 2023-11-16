@@ -589,61 +589,184 @@
 }
 
 /* Products styles */
+#productsPage {}
 
-#productsPage {
-  margin: 20px 0;
+.productTitle {
+  margin: 50px 0 25px 110px;
+  color: var(--foundation-blue-dark, #356BA5);
+  font-family: Montserrat, sans-serif;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 95px;
+  letter-spacing: -8px;
+  text-transform: capitalize;
+  text-align: left;
 }
 
-#productsWelcomeContainer {
+.productsSection {
+display: inline-flex;
+}
+
+.productSortByOptions {
+  width: 450px;
+}
+
+.productAccordionContainer {}
+
+.productFilterAccordionItem {
   display: flex;
-  padding: 7vw;
-  margin: 20px 0;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  border: none;
+  flex-direction: column;
+  text-align: left;
 }
 
-#productsAccentDiv {
-  position: relative;
-  bottom: 3vw;
-  left: 15vw;
-  width: 40vw;
-  height: 30vw;
-  background-color: var(--color-1);
+.accordion-button::after,
+.accordion-button::before {
+  color: white;
+  background-image: url('./Assets/whitePlus.png') !important;
 }
 
-#productWelcomeMsg {
-  position: relative;
-  font-family: var(--font-1);
-  right: 10vw;
+#productFilterHeader button {
+  color: var(--White, #FFF);
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  text-transform: capitalize;
+  border-radius: 12px;
+  width: 210px;
+  background: var(--foundation-blue-normal-active, #3972B0);
 }
 
-#welcomeImg {
-  background-color: rgba(0, 0, 0, 0.485);
-  object-fit: cover;
-  object-position: 50% 50%;
-  border-radius: 35px;
-  width: 40vw;
-  height: 30vw;
-  background-color: var(--color-3);
-  position: relative;
-  right: 10vw;
+.productFilterInputSection {}
+
+.productFilterInputContainer {}
+
+.productFilterInput {
+  border-radius: none;
+  border: 1px solid black;
+  margin: 5px;
 }
 
-#productsSection {
-  padding: 20px;
-  /* background-color: var(--color-1); */
+.productFilterLabel {
+  color: var(--Black, #0C0C0C);
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+  text-transform: capitalize;
 }
 
-#productSelectorContainer button {
-  margin: 20px;
-}
-
-#productsContainer {
+.productDisplayContainer {
+  padding: 0 25px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-evenly;
 }
 
-/* Success styles */
+.productIconContainer {
+  text-decoration: none;
+  color: black;
+}
+
+.productComingSoon {
+  background-color: white;
+  position: relative;
+  top: 10px;
+  display: flex;
+  width: 117px;
+  height: 32px;
+  padding: 0px 8px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border: 1px solid black;
+  color: var(--Black, #0C0C0C);
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+  text-transform: capitalize;
+}
+
+.productLikedIcon {
+  position: relative;
+  left: 90%;
+  bottom: 30px;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.productImgContainer {
+  margin: 5px;
+  height: 440px;
+  width: 390px;
+  background-color: lightgray;
+  padding: 15px 35px;
+}
+
+.productName {
+  color: var(--Black, #0C0C0C);
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  text-transform: capitalize;
+}
+
+.productClassification {
+  color: var(--Black, #0C0C0C);
+
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+  text-transform: capitalize;
+}
+
+.productPrice {
+  color: var(--Black, #0C0C0C);
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  text-transform: capitalize;
+}
+
+.productIconLink {
+  color: var(--White, #FFF);
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: capitalize;
+  position: relative;
+  top: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 40px;
+  padding: 16px;
+  background: var(--foundation-blue-normal-hover, #4080C6);
+}
 
 /* FAQ styles */
 

@@ -1,55 +1,79 @@
 import { useContext, useEffect, useState } from "react";
 import { useDataFetcher } from "../hooks/useDataFetcher";
 import { CartContext } from "../context/CartContext";
-import { Button } from "reactstrap";
 import Icon from "../components/Icon";
-import { merch, beans } from '../data.js'
-import stus_hat from '../Assets/Merch/stus_hat.png'
+import likedIcon from '../Assets/likedIcon.png'
+import { useParams } from "react-router";
+import FooterLinks from "../components/FooterLinks";
+import { Accordion, AccordionBody, AccordionHeader, AccordionItem, Input, Label } from "reactstrap";
+import { Link } from "react-router-dom";
 
 const Products = () => {
+    const { catagory } = useParams()
+
     const { API_URL } = useContext(CartContext)
-    const [sectionSwitch, setSelectionSwitch] = useState('merch')
-    const toggle = (e) => { setSelectionSwitch(e.target.name) }
-    // const { getData: getBean, data: beans, error: beanError, loading: beanLoading } = useDataFetcher();
-    // const { getData: getMerch, data: merch, error: merchError, loading: merchLoading } = useDataFetcher();
+    const { getData, data, error, loading } = useDataFetcher();
+    const [open, setOpen] = useState('');
+    const toggle = (id) => {
+        open === id ? setOpen() : setOpen(id)
+    };
 
     useEffect(() => {
-        // getMerch(`${API_URL}merch`)
-        // getBean(`${API_URL}bean`)
-    }, []);
+        getData(`${API_URL}${catagory}`)
+    }, [catagory]);
 
-    const mappedbeanItems = beans.map((product) => {
-        return (
-            <Icon product={product} />
-        )
-    })
+    const filterOptions = catagory == 'beans' ?
+        [{ 'Sort By': ['Featured', 'Best Seller', 'Price: Low To High', 'Price: High To Low'] }, { 'Roast': ['light', 'medium', 'dark', 'espresso'] }, { 'Collection': ['autumn', 'holiday'] }, { 'Bean Type': ['whole', 'ground'] }] :
+        [{ 'Sort By': ['light', 'medium', 'dark', 'espresso'] }, { 'Type': ['autumn', 'holiday'] }, { 'Price': ['whole', 'ground'] }];
+    const mappedSortOptions = filterOptions.map((filterGroup, i) => {
+        const mappedFilterGroup = Object.entries(filterGroup).map(([groupName, filterItems]) => (
+            <AccordionItem className="productFilterAccordionItem" key={i}>
+                <AccordionHeader id="productFilterHeader" targetId={i}>{groupName}</AccordionHeader>
+                <AccordionBody className="productFilterInputSection" accordionId={i}>
+                    {filterItems.map((filterItem, j) => (
+                        <div key={j} className="productFilterInputContainer">
+                            <Input className="productFilterInput" type="checkbox" />
+                            <Label className="productFilterLabel">{filterItem}</Label>
+                        </div>
+                    ))}
+                </AccordionBody>
+            </AccordionItem>
+        ));
+        return mappedFilterGroup
+    });
 
-    const mappedMerchItems = merch.map((product) => {
+    const inventory = data.map((product) => {
+        console.log(product)
         return (
-            <Icon product={product} />
+            <Link className="productIconContainer">
+                <div className="productImgContainer" style={{ backgroundImage: `url(${product.image})` }} >
+                    <p className="productComingSoon">Coming Soon</p>
+                    <img className="productLikedIcon" src={likedIcon} />
+                    <p className="productIconLink">Next</p>
+                </div>
+                <p className="productName">{product.name}</p>
+                <p className="productClassification">{product.region}</p>
+                <p className="productPrice">${product.price / 100}</p>
+            </Link >
         )
     })
 
     return (
         <div id="productsPage">
-            <div id="productsWelcomeContainer">
-                <div id="productsAccentDiv" />
-                {/* <div className="title" id="productWelcomeMsg">
-                    <p>Merch</p>
-                    <p>&</p>
-                    <p>Beans</p>
-                </div> */}
-                <img id="welcomeImg" src={stus_hat} />
+            <div className="productTitle">
+                {catagory == 'beans' ? 'COFFEE BEANS' : 'SHOP'}
             </div>
-            <div id="productsSection">
-                <div id="productSelectorContainer">
-                    <Button name="merch" onClick={toggle}>Merch</Button>
-                    <Button name="beans" onClick={toggle}>Beans</Button>
+            <div className="productsSection">
+                <div className="productSortByOptions">
+                    <Accordion flush className="productAccordionContainer" open={open} toggle={toggle}>
+                        {mappedSortOptions}
+                    </Accordion>
                 </div>
-                <div id="productsContainer">
-                    {sectionSwitch == 'merch' ? mappedMerchItems : mappedbeanItems}
+                <div className="productDisplayContainer">
+                    {inventory}
                 </div>
             </div>
+            <FooterLinks />
         </div>
     );
 }

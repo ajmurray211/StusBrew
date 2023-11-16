@@ -36,7 +36,7 @@ const Home = () => {
                     <div className='hc2' />
                 </div>
                 <div style={{ gridRow: 'span 2' }} className='bordered'>
-                    <Link to={'/menu'} className='homeLink'>
+                    <Link to={'/shop/beans'} className='homeLink'>
                         <div className='hc3'>
                             <img className='homeBeanBanner' src={homeBeanBanner}/>
                             <p className='hc3t'>Beans</p>

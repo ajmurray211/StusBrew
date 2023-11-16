@@ -21,12 +21,12 @@ const Nav = () => {
                 <Dropdown isOpen={isOpen} toggle={toggle} direction='down'>
                     <DropdownToggle id='navDropdown' className='navLink' caret>Menu</DropdownToggle>
                     <DropdownMenu>
-                        <Link className='navLink' onClick={toggle} to='/'><DropdownItem>Coffee Beans</DropdownItem></Link>
+                        <Link className='navLink' onClick={toggle} to='/shop/beans'><DropdownItem>Coffee Beans</DropdownItem></Link>
                         <DropdownItem divider />
                         <Link className='navLink' onClick={toggle} to='/menu'><DropdownItem >Bakery</DropdownItem></Link>
                     </DropdownMenu>
                 </Dropdown>
-                <Link className='navLink' onClick={toggle} to='/products'>Shop</Link>
+                <Link className='navLink' onClick={toggle} to='/shop/merch'>Shop</Link>
             </div>
             <div className='navTitleLogo'>
                 <Link to="/"><img className="navTitleLogo" alt='stus logo' src={stusTitle} /></Link>
