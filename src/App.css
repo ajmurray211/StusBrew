@@ -202,6 +202,7 @@
 }
 
 .homeMarquee {
+  padding: 15px;
   font-size: 200px;
   border: 1px solid black;
   color: var(--foundation-blue-normal-active, #3972B0);
@@ -238,6 +239,16 @@
   text-transform: uppercase;
   text-align: left;
   margin: 60px;
+}
+
+.homeTitleTxtFooter {
+  color: var(--foundation-blue-normal-active, #3972B0);
+  font-family: Urbanist, sans-serif;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 180%;
+  text-transform: uppercase;
 }
 
 .hc2 {
@@ -288,7 +299,20 @@
   height: 525px;
 }
 
-.hc3t,
+.hc3t {
+  color: #FFF;
+  text-align: center;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 800;
+  position: relative;
+  top: 35%;
+  margin-left: 25px;
+  width: 300px;
+  line-height: 70px;
+}
+
 .hc5t {
   color: #FFF;
   text-align: center;
@@ -301,6 +325,17 @@
   margin-left: 25px;
   width: 300px;
   line-height: 70px;
+}
+
+.homeBeanBanner {
+  width: 250px;
+  position: relative;
+  bottom: 10%;
+  left: 35%;
+}
+
+.homeLink {
+  text-decoration: none;
 }
 
 .homeLinkArrow {
@@ -788,7 +823,7 @@
   align-items: center;
   border-bottom: 1px solid black;
   height: 150px;
-  padding: 0 10% 0 15%;
+  padding: 0 10% 0 25%;
 }
 
 .navLinkContainer {
@@ -808,7 +843,8 @@
 
 .navTitleLogo {
   background-image: url('./Assets/stusTitle.png');
-  height: 200px;
+  width: 262px;
+  height: 105px;
   position: relative;
   object-fit: cover;
 }

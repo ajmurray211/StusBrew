@@ -13,7 +13,7 @@ import { ProductContext } from './context/ProductContext';
 import { useContext } from 'react';
 import image from './Assets/images.jpg'
 import Success from './pages/Success';
-import MenuItem from './pages/MenuItem';
+import MenuItem from './components/MenuItem';
 
 function App() {
   const { selectedProduct } = useContext(ProductContext);

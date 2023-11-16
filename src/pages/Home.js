@@ -12,6 +12,7 @@ import hf2 from '../Assets/hf2.jpg'
 import hf3 from '../Assets/hf3.jpg'
 import hf4 from '../Assets/hf4.jpg'
 import hf5 from '../Assets/hf5.jpg'
+import homeBeanBanner from '../Assets/homeBeansBanner.png'
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -28,16 +29,19 @@ const Home = () => {
                 <div className='bordered'>
                     <div>
                         <p className='homeTitleTxt'>Stu’s Bake n’ Brew is a locally owned and grown bakery and coffee bean company.</p>
-                        <p>Currently we are mobile and mainly attend farmers markets.</p>
+                        <p className='homeTitleTxtFooter'>Currently we are mobile and mainly attend farmers markets.</p>
                     </div>
                 </div>
                 <div className='bordered'>
                     <div className='hc2' />
                 </div>
                 <div style={{ gridRow: 'span 2' }} className='bordered'>
-                    <div className='hc3'>
-                        <p className='hc3t'>Beans</p>
-                    </div>
+                    <Link to={'/menu'} className='homeLink'>
+                        <div className='hc3'>
+                            <img className='homeBeanBanner' src={homeBeanBanner}/>
+                            <p className='hc3t'>Beans</p>
+                        </div>
+                    </Link>
                 </div>
                 <div className='bordered'>
                     <p className='hc4 homeTitleTxt'>CHECK OUT THE CHARITIES WE SUPPORT<img className='homeLinkArrow' src={linkArrow} /></p>
@@ -46,7 +50,7 @@ const Home = () => {
                     <img className='hc6' src={stusCupLogo} />
                 </div>
                 <div style={{ gridRow: 'span 2' }} className='bordered'>
-                    <Link to={'/menu'}>
+                    <Link to={'/menu'} className='homeLink'>
                         <div className='hc5'>
                             <p className='hc5t'>Baked Goods</p>
                         </div>

@@ -4,9 +4,9 @@ import { CartContext } from '../context/CartContext.js';
 import {
     Accordion, AccordionBody, AccordionHeader, AccordionItem, Button,
 } from 'reactstrap';
-import LoadingIcon from '../components/LoadingIcon.js'
+import LoadingIcon from './LoadingIcon.js'
 import stusCupLogo from '../Assets/stusCupLogo.png'
-import FooterLinks from '../components/FooterLinks.js';
+import FooterLinks from './FooterLinks.js';
 
 const MenuItem = () => {
     const { API_URL, addToCart } = useContext(CartContext)
@@ -40,7 +40,7 @@ const MenuItem = () => {
             {product ?
                 <div className='menuItemSection'>
                     <div className='menuItemPath'>
-                        <p>Home/BakedGoods/{product.name}</p>
+                        <p>Home/Shop/BakedGoods/{product.name}</p>
                     </div>
                     <div className='menuItemGrid'>
                         <div className='mic1'>
