@@ -11,7 +11,7 @@ import Products from './pages/Products'
 import { ProductContext } from './context/ProductContext';
 import { useContext } from 'react';
 import Success from './pages/Success';
-import MenuItem from './components/MenuItem';
+import Item from './components/Item';
 
 function App() {
   const { selectedProduct } = useContext(ProductContext);
@@ -23,10 +23,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/menu' element={<Menu />}></Route>
-          <Route path='/menuItem/:id' element={<MenuItem />}></Route>
           <Route path='/shop/:catagory' element={<Products />}></Route>
-          <Route path='/beanItem/:id' element={<MenuItem />}></Route>
-          <Route path='/merchItem/:id' element={<MenuItem />}></Route>
+          <Route path='/shop/:catagory/:id' element={<Item />}></Route>
           <Route path='/faq' element={<Faq />}></Route>
           <Route path='/about' element={<About />}></Route>
           <Route path="/details" element={selectedProduct === null ? <Home /> : <Details />} />

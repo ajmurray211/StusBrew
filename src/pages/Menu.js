@@ -39,7 +39,7 @@ const Menu = () => {
         if (item.classification == 'baked') {
             return (
                 <li className="menuOption">
-                    <Link to={`/menuItem/${encodeURIComponent(item._id)}`} className="menuOptionLink">
+                    <Link to={`/shop/bakedGoods/${encodeURIComponent(item._id)}`} className="menuOptionLink">
                         <p className='menuOptionTitle'>{item.name}</p>
                     </Link>
                     <p className='menuOptionDescription'>{item.description}</p>
