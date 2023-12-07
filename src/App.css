@@ -144,36 +144,119 @@
 
 /* About styles */
 
-.aboutMsg {
-  margin: 20px;
-  min-width: 370px;
-}
-
 #aboutPage {
-  margin: 10px;
+  margin: 15px;
+}
+
+#aboutTitleSection {}
+
+.aboutImg {
+  margin: 25px 0;
+  width: 548px;
+  height: 548px;
+  flex-shrink: 0;
+  border-radius: 548px;
+  background: url('./Assets/stu.jpeg'), lightgray 50% / cover no-repeat, #D9D9D9;
+}
+
+.aboutTitle {
+  color: var(--foundation-blue-normal, #478EDC);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: var(--font-1);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 92px;
+  letter-spacing: -1.481px;
+}
+
+.aboutMsgContainer {
   display: flex;
+  width: 70%;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  margin: 0 100px;
+  margin: 50px auto;
+  color: var(--foundation-blue-dark, #356BA5);
+  text-align: center;
+  font-family: var(--font-1);
+  font-size: 20px;
+  line-height: 38px;
+  letter-spacing: -1.481px;
 }
 
-#aboutContainer {
+.aboutMsg {}
+
+.contactFormSection {
+  padding: 25px;
+  border-top: 1px solid black;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-evenly;
+  text-align: left;
 }
 
-#aboutPage h1 {
-  padding-bottom: 50px;
-  min-width: 370px;
+.aboutContactDescription {
+  margin: 25px 0 0 0;
 }
 
-.aboutMsg {
-  width: 40vw;
-  min-width: 370px;
+.aboutContactIcon {
+  width: 25px;
+  padding: 5px;
 }
+
+.aboutContactTimes {
+  color: #000;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: var(--font-1);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -1.481px;
+}
+
+.aboutContactSubTitle {
+  color: #000;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: var(--font-1);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -1.481px;
+}
+
+.aboutContactNumber {
+  color: #000;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -1.481px;
+}
+
+.aboutContactEmail {
+  color: #000;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.aboutContactInputs {
+  margin: 0 25px;
+}
+
+.aboutInputRow {
+  margin: 25px 0;
+}
+
+.aboutFormSubmit {
+  padding: 10px 20px;
+  border-radius: 48px;
+  background: var(--foundation-blue-normal, #478EDC);
+}
+
 
 @media screen and (max-width: 425px) {
 
