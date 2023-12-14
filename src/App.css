@@ -145,7 +145,7 @@
 /* About styles */
 
 #aboutPage {
-  margin: 15px;
+  margin: 15px 0 0 0;
 }
 
 #aboutTitleSection {}
@@ -453,8 +453,6 @@
   line-height: 24px;
   text-transform: capitalize;
 }
-
-
 
 /* Merch styles */
 
@@ -1023,6 +1021,105 @@
 
 .itemAccordionHeader button {
   text-transform: capitalize;
+}
+
+/* Success Page */
+
+.successOrderNum {
+  color: var(--foundation-blue-dark, #356BA5);
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 95px;
+  text-transform: capitalize;
+}
+
+.SuccessMsg {
+  color: var(--foundation-blue-dark, #356BA5);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 95px;
+  /* 131.944% */
+  letter-spacing: -8px;
+  text-transform: capitalize;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.successIcon {
+  width: 500px;
+  height: 500px;
+  flex-shrink: 0;
+}
+
+.successNewsLetter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid black;
+}
+
+.successNewsLetterTitle {
+  color: var(--foundation-blue-dark, #356BA5);
+  /* H5 */
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  /* 28px */
+  text-transform: capitalize;
+}
+
+.successNewsLetterInputContainer {
+  display: flex;
+  padding: 0px 16px;
+  justify-content: center;
+  width: 496px;
+  height: 40px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.successNewsLetterInput {
+  color: #235892;
+
+  /* bodyXS */
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+  /* 21.6px */
+  text-transform: capitalize;
+}
+
+.successInputArrow {
+  position: relative;
+  right: 35px;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.successNewsLetterFooter {
+  color: var(--foundation-blue-dark, #356BA5);
+
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.8px;
 }
 
 /* ################################## Component styles ################################## */

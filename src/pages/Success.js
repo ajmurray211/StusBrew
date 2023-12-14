@@ -1,10 +1,13 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { CartContext } from '../context/CartContext.js'; // Assuming you have the correct path to the CartContext file.
-import greenCheck
- from '../Assets/greenCheck.png'
+import stusCupLogo from '../Assets/stusCupLogo.png'
+import arrowIcon from '../Assets/arrowIcon.png'
+import { Input } from 'reactstrap';
+import FooterLinks from '../components/FooterLinks.js';
 
 const Success = () => {
     const { cart, clearCart } = useContext(CartContext);
+    const [email, setEmail] = useState(null)
     let cartItems = []
 
     console.log(cart, 'cart')
@@ -18,25 +21,33 @@ const Success = () => {
 
     return (
         <div className='successPage'>
-            <div className='congragualtionsSection'>
-                <img clas src={greenCheck}/>
-                <h2>Congratulations! Your Order Has Been Placed</h2>
-            </div>
-            <div className='orderedItemsSection'>
-                <h3>Ordered Items:</h3>
-                <ul>
-                    {cart.map((item) => (
-                        <li key={item.productId}>
-                            {item.name} - ${item.priceInCents / 100} (Size: {item.size}, Quantity: {item.qty})
-                        </li>
-                    ))}
-                </ul>
-            </div>
-            <div className='thankYouSection'>
-                <p>Thank you for your business. We appreciate your support!</p>
-                <p>Your order means a lot to us here at stu's bake n' brew please come again!</p>
+            <div className='successMsgSection'>
+                <div className='successOrderNum'>
+                    <p>ORDER #12345678{ }</p>
+                </div>
+                <div className='SuccessMsg'>
+                    <p>THANK YOU FOR YOUR PURCHASE</p>
+                </div>
+                <div >
+                    <img className='successIcon' src={stusCupLogo} alt='Stus Brew Cup Logo' />
+                </div>
             </div>
 
+            <div className='successNewsLetter'>
+                <div className='successNewsLetterTitle'>
+                    Join our club, get 15% off for your Birthday
+                </div>
+                <div className='successNewsLetterInputContainer'>
+                    <Input className='successNewsLetterInput' type='email' value={email} onChange={(e) => setEmail(e.target.value)} m placeholder='Enter Your Email Address' />
+                    <img className='successInputArrow' src={arrowIcon} />
+                </div>
+                <div className='successNewsLetterFooter'>
+                    <Input type='checkbox' disabled />
+                    <p>By Submittng your email, you agree to receive advertising emails from Stu’s Brew.</p>
+                </div>
+            </div>
+
+            <FooterLinks />
         </div>
     );
 };
