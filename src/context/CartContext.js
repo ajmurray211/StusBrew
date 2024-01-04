@@ -21,23 +21,23 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem('shoppingCart', JSON.stringify(cart));
   }, [cart]);
 
-
   const addToCart = (item) => {
-    console.log(item, cart)
-    const existingItem = cart.find((cartItem) => cartItem.productId === item.productId);
+    const existingItemIndex = cart.findIndex((cartItem) => cartItem._id === item._id);
 
-    if (existingItem) {
-      const updatedCart = cart.map((cartItem) =>
-        cartItem.productId === item.productId ? { ...cartItem, qty: cartItem.qty + 1 } : cartItem
-      );
+    if (existingItemIndex !== -1) {
+      // Item is already in the cart
+      const updatedCart = [...cart];
+      updatedCart[existingItemIndex].qty += 1;
       setCart(updatedCart);
     } else {
-      setCart((prevCart) => [...prevCart, item]);
+      // Item is not in the cart
+      setCart((prevCart) => [...prevCart, { ...item, qty: 1 }]);
     }
   };
 
+
   const removeFromCart = (itemId) => {
-    setCart((prevCart) => prevCart.filter((item) => item.id !== itemId));
+    setCart((prevCart) => prevCart.filter((item) => item._id !== itemId));
   };
 
   const clearCart = () => {

@@ -42,10 +42,10 @@ const Footer = () => {
                     <p className="footerBody newsLetterMsg">By Submittng your email, you agree to receive advertising emails from Stu’s Brew.</p>
                 </div>
                 <div id='socialsContainer'>
-                    <a target="_blank" href="https://www.instagram.com/stus.brew/?utm_source=ig_embed&amp;utm_campaign=loading">{<img className='footerIcon' src={instagramIcon} />}</a>
-                    <a target="_blank" href="https://www.instagram.com/stus.brew/?utm_source=ig_embed&amp;utm_campaign=loading">{<img className='footerIcon' src={facebookIcon} />}</a>
-                    <a target="_blank" href="https://www.instagram.com/stus.brew/?utm_source=ig_embed&amp;utm_campaign=loading">{<img className='footerIcon' src={tiktokIcon} />}</a>
-                    <a target="_blank" href="https://www.instagram.com/stus.brew/?utm_source=ig_embed&amp;utm_campaign=loading">{<img className='footerIcon' src={pintrestIcon} />}</a>
+                    <a target="_blank" href="https://www.instagram.com/stus.bake.n.brew/">{<img className='footerIcon' src={instagramIcon} />}</a>
+                    <a target="_blank" href="https://www.instagram.com/stus.bake.n.brew/">{<img className='footerIcon' src={facebookIcon} />}</a>
+                    <a target="_blank" href="https://www.instagram.com/stus.bake.n.brew/">{<img className='footerIcon' src={tiktokIcon} />}</a>
+                    <a target="_blank" href="https://www.instagram.com/stus.bake.n.brew/">{<img className='footerIcon' src={pintrestIcon} />}</a>
                 </div>
                 <div className='footerCopyright'>
                     <p className='footerBody'>© 2023 stu's Brew. All Rights Reserved.</p>

@@ -1,11 +1,11 @@
-import { useContext } from "react";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { Button, Modal, ModalBody, ModalFooter, ModalHeader, Popover, PopoverBody, PopoverHeader, UncontrolledPopover } from "reactstrap";
+import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../context/CartContext";
 import axios from "axios";
+import arrowRight from '../Assets/arrow-right-blue-thin.png'
 
 const Cart = (props) => {
     const { cart, clearCart, runningCartTotal, getCartItemCount, API_URL } = useContext(CartContext);
+    const [cartSubtotal, setCartSubtotal] = useState(0)
 
     const handleCheckout = async () => {
         axios.post(`${API_URL}create-checkout-session`, { cart, cart })
@@ -18,42 +18,49 @@ const Cart = (props) => {
             })
     }
 
-    const mappedCartItems = cart.map((item) => (
-        <li key={item.name}>
-            {item.name} - {item.size}, {item.priceInCents / 100} x {item.qty} - ${(item.priceInCents / 100) * item.qty}
-        </li>
-    ));
+    useEffect(() => {
+        const subtotal = cart.reduce((total, item) => {
+            return total + (item.qty * item.priceInCents) / 100;
+        }, 0);
+
+        const formattedSubtotal = parseFloat(subtotal.toFixed(2));
+
+        setCartSubtotal(formattedSubtotal);
+
+        console.log(formattedSubtotal, runningCartTotal);
+    }, [cart]);
+
+    const mappedCartItems = cart.map((item) => {
+        console.log(item)
+        return (
+            <li className="cartItemDetails" key={item.name}>
+                <div className="cartItemmetacontainer">
+                    <img src={`${API_URL}${item.image}`} className="cartItemImg" />
+                    <div className="cartItemMeta">
+                        <p>{item.name}</p>
+                        <p>
+                            <span className="cartItemQty">Qty</span> {item.qty}
+                        </p>
+                    </div>
+                </div>
+                <p>$ {item.qty * (item.priceInCents / 100)}</p>
+            </li>
+        );
+    });
 
     return (
-        <div className="cartComponent">
-            <div className="cartIconSection">
-                <ShoppingCartIcon id='cartIcon' onClick={props.toggle} />
-                {getCartItemCount() > 0 && (
-                    <div id="itemsInCart">{getCartItemCount()}</div>
-                )}
+        <div className="cartBodyContainer">
+            <div className="itemsInCart">
+                {mappedCartItems}
             </div>
-            <UncontrolledPopover
-                placement="left"
-                target="cartIcon"
-                id="cartDetailsSection"
-            >
-                <PopoverBody className="cartBody">
-                    <div className="body">
-                        {getCartItemCount() === 0 ? 'Your cart is empty' : mappedCartItems}
-                    </div>
-                    <div className="cartFooter">
-                        <Button className="cartBtn body" color="secondary" onClick={handleCheckout}>
-                            Check Out
-                        </Button>
-                        <Button className="cartBtn body" color="secondary" onClick={() => {
-                            clearCart();
-                            props.toggle();
-                        }}>
-                            Clear cart
-                        </Button>
-                    </div>
-                </PopoverBody>
-            </UncontrolledPopover>
+            <div className="cartTotal">
+                <p>Subtotal</p>
+                <p>$ {cartSubtotal}</p>
+            </div>
+            <div onClick={handleCheckout} className="cartFooter">
+                <p>Checkout</p>
+                <img className="cartCheckoutArrow" src={arrowRight} />
+            </div>
         </div>
     );
 }
