@@ -54,6 +54,10 @@
   font-family: "Roboto Condensed", sans-serif;
 }
 
+@media screen and (max-width: 800px) {
+  .body {}
+}
+
 /* ################################## Page styles ################################## */
 
 /* details page styles */
@@ -147,8 +151,6 @@
 #aboutPage {
   margin: 15px 0 0 0;
 }
-
-#aboutTitleSection {}
 
 .aboutImg {
   margin: 25px 0;
@@ -244,7 +246,7 @@
 }
 
 .aboutContactInputs {
-  margin: 0 25px;
+  margin: 0 15px;
 }
 
 .aboutInputRow {
@@ -262,6 +264,7 @@
 
   .aboutImg {
     width: 370px;
+    height: auto;
   }
 }
 
@@ -297,8 +300,8 @@
 }
 
 .homeTitleImg {
-  width: 1304px;
-  height: 886px;
+  width: 80%;
+  height: 60rem;
   background-image: url('./Assets//shop.jpg');
   margin: 70px auto;
   background-size: cover;
@@ -405,7 +408,7 @@
   font-weight: 800;
   position: relative;
   top: 65%;
-  margin-left: 25px;
+  /* margin-left: 25px; */
   width: 300px;
   line-height: 70px;
 }
@@ -449,9 +452,39 @@
   font-size: 96px;
   font-style: normal;
   font-weight: 400;
-  margin-top: 25px;
+  margin-top: 35px;
   line-height: 24px;
   text-transform: capitalize;
+}
+
+@media screen and (max-width: 600px) {
+
+  #homeTitle {
+    width: 50%;
+    height: fit-content;
+    text-align: left;
+  }
+
+  .gridContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hc6 {
+    height: 80%;
+    width: 80%;
+    margin: 30px 20px;
+  }
+
+  .homeTitleTxt {
+    margin: 10px;
+    text-align: center;
+  }
+
+  .hc3t {
+    margin-left: 0;
+  }
+
 }
 
 /* Merch styles */
@@ -669,6 +702,26 @@
   text-transform: capitalize;
 }
 
+@media screen and (max-width: 600px) {
+
+  .menuGrid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menuSectionTitle {
+    transform: rotate(0deg);
+    width: initial;
+  }
+
+  .mc1,
+  .mc2,
+  .mc3 {
+    display: initial;
+  }
+}
+
+
 /* Products styles */
 
 .productTitle {
@@ -852,6 +905,13 @@
   opacity: 1;
 }
 
+@media screen and (max-width: 600px) {
+
+  .productsSection {
+    display: initial;
+  }
+}
+
 /* FAQ styles */
 
 #faqWelcome {
@@ -1023,6 +1083,26 @@
   text-transform: capitalize;
 }
 
+@media screen and (max-width: 600px) {
+
+  .ItemPath {
+    padding-left: 0px;
+    font-size: 18px;
+    padding: 0px 10px;
+  }
+
+  .ItemGrid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ItemImg {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
 /* Success Page */
 
 .successOrderNum {
@@ -1132,8 +1212,7 @@
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid black;
-  height: 150px;
-  padding: 0 10% 0 25%;
+  padding: 25px 10% 25px 25%;
 }
 
 .navLinkContainer {
@@ -1307,7 +1386,7 @@
   border-bottom: 1px solid #D9D9D9;
 }
 
-.cartItemmetacontainer{
+.cartItemmetacontainer {
   display: flex;
   gap: 20px;
 }
@@ -1491,6 +1570,20 @@
     justify-content: center;
     align-items: center;
     padding: 0;
+    background: none;
+    border: none;
+  }
+
+  .footerInfoSection {
+    display: none;
+  }
+
+  .footer {
+    padding: 20px;
+  }
+
+  .footerSocialsSection {
+    width: fit-content;
   }
 }
 
