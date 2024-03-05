@@ -8,6 +8,7 @@ import searchIcon from '../Assets/searchIcon.png'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import Cart from './Cart';
+import { useToggler } from '../hooks/useToggler';
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -27,14 +28,14 @@ const Nav = () => {
                         <Link className='navLink' onClick={toggle} to='/menu'><DropdownItem >Bakery</DropdownItem></Link>
                     </DropdownMenu>
                 </Dropdown>
-                <Link className='navLink' onClick={toggle} to='/shop/merch'>Shop</Link>
+                <Link className='navLink' to='/shop/merch'>Shop</Link>
             </div>
             <div className='navTitleLogo'>
                 <Link to="/"><img className="navTitleLogo" alt='stus logo' src={stusTitle} /></Link>
             </div>
             <div className='navLinkContainer navContainer'>
-                <Link className='navLink' onClick={toggle} to='/menu'>Contact</Link>
-                <Link className='navLink' onClick={toggle} to='/about'>About</Link>
+                <Link className='navLink' to='/menu'>Contact</Link>
+                <Link className='navLink' to='/about'>About</Link>
             </div>
             <div className='navIconContainer navContainer'>
                 <Link to="/"><img className="navIcon" alt='search icon' src={searchIcon} /></Link>
