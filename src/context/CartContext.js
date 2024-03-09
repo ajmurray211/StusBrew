@@ -35,6 +35,36 @@ export const CartProvider = ({ children }) => {
     }
   };
 
+  const lowerItemCount = (item) => {
+    const existingItemIndex = cart.findIndex((cartItem) => cartItem._id === item._id);
+
+    if (existingItemIndex !== -1) {
+      // Item exsists in the cart
+      const updatedCart = [...cart];
+      if (updatedCart[existingItemIndex].qty !== 1) {
+        updatedCart[existingItemIndex].qty -= 1;
+        setCart(updatedCart);
+      } else {
+        removeFromCart(item._id)
+      }
+    } else {
+      console.log('Encountered a problem when trying to remove an item from the cart.')
+    }
+  }
+
+  const raiseItemCount = (item) => {
+    const existingItemIndex = cart.findIndex((cartItem) => cartItem._id === item._id);
+
+    if (existingItemIndex !== -1) {
+      // Item exsists in the cart
+      const updatedCart = [...cart];
+        updatedCart[existingItemIndex].qty += 1;
+        setCart(updatedCart);
+     
+    } else {
+      console.log('Encountered a problem when trying to add an item to the cart.')
+    }
+  }
 
   const removeFromCart = (itemId) => {
     setCart((prevCart) => prevCart.filter((item) => item._id !== itemId));
@@ -61,7 +91,9 @@ export const CartProvider = ({ children }) => {
         removeFromCart,
         clearCart,
         getCartTotal,
-        getCartItemCount
+        getCartItemCount,
+        lowerItemCount,
+        raiseItemCount
       }}
     >
       {children}

@@ -2,9 +2,10 @@ import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../context/CartContext";
 import axios from "axios";
 import arrowRight from '../Assets/arrow-right-blue-thin.png'
+import { Button } from "reactstrap";
 
 const Cart = (props) => {
-    const { cart, clearCart, runningCartTotal, getCartItemCount, API_URL } = useContext(CartContext);
+    const { cart, clearCart, runningCartTotal, raiseItemCount, API_URL, lowerItemCount } = useContext(CartContext);
     const [cartSubtotal, setCartSubtotal] = useState(0)
 
     const handleCheckout = async () => {
@@ -38,8 +39,10 @@ const Cart = (props) => {
                     <img src={`${API_URL}${item.image}`} className="cartItemImg" />
                     <div className="cartItemMeta">
                         <p>{item.name}</p>
-                        <p>
+                        <p className="cartItemCount">
+                            <p className="cartItemCountAdj" onClick={() => lowerItemCount(item)}>-</p>
                             <span className="cartItemQty">Qty</span> {item.qty}
+                            <p className="cartItemCountAdj" onClick={() => raiseItemCount(item)}>+</p>
                         </p>
                     </div>
                 </div>
@@ -57,9 +60,12 @@ const Cart = (props) => {
                 <p>Subtotal</p>
                 <p>$ {cartSubtotal}</p>
             </div>
-            <div onClick={handleCheckout} className="cartFooter">
-                <p>Checkout</p>
-                <img className="cartCheckoutArrow" src={arrowRight} />
+            <div className="cartFooter">
+                <p className="cartClearBtn" onClick={() => clearCart()}>Clear Cart</p>
+                <div onClick={handleCheckout}>
+                    <p>Checkout</p>
+                    <img className="cartCheckoutArrow" src={arrowRight} />
+                </div>
             </div>
         </div>
     );
