@@ -38,13 +38,13 @@ const Home = () => {
                 <div style={{ gridRow: 'span 2' }} className='bordered'>
                     <Link to={'/shop/beans'} className='homeLink'>
                         <div className='hc3'>
-                            <img className='homeBeanBanner' src={homeBeanBanner}/>
+                            <img className='homeBeanBanner' src={homeBeanBanner} />
                             <p className='hc3t'>Beans</p>
                         </div>
                     </Link>
                 </div>
                 <div className='bordered'>
-                    <p className='hc4 homeTitleTxt'>CHECK OUT THE CHARITIES WE SUPPORT<img className='homeLinkArrow' src={linkArrow} /></p>
+                    <Link className='hc4 homeTitleTxt' to='/charities'>CHECK OUT THE CHARITIES WE SUPPORT<img className='homeLinkArrow' src={linkArrow} /></Link>
                 </div>
                 <div style={{ gridRow: 'span 4' }} className='bordered'>
                     <img className='hc6' src={stusCupLogo} />

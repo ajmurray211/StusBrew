@@ -1,4 +1,4 @@
-import Charities from '../components/Charities';
+import Charities from './Charities';
 import phoneIcon from '../Assets/phoneIcon.png'
 import emailIcon from '../Assets/emailIcon.png'
 import { Input, Button, Form, Row, Col } from 'reactstrap';

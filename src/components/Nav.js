@@ -1,4 +1,4 @@
-import { Navbar, Dropdown, DropdownMenu, DropdownToggle, DropdownItem, Popover, Button, PopoverHeader, PopoverBody } from 'reactstrap';
+import { Navbar, Dropdown, DropdownMenu, DropdownToggle, DropdownItem, Popover, Button, PopoverHeader, PopoverBody, UncontrolledPopover } from 'reactstrap';
 import stusTitle from '../Assets/stusTitle.png'
 import userIcon from '../Assets/userIcon.png'
 import bagIcon from '../Assets/bagIcon.png'
@@ -20,21 +20,21 @@ const Nav = () => {
     return (
         <Navbar sticky='top' id='navbar'>
             <div className='navLinkContainer navContainer'>
-                <Dropdown isOpen={isOpen} toggle={toggle} direction='down'>
-                    <DropdownToggle id='navDropdown' className='navLink' caret>Menu</DropdownToggle>
+                <Dropdown  disabled isOpen={isOpen} toggle={toggle} direction='down'>
+                    <DropdownToggle id='navDropdown' className='navLink' caret>Shop</DropdownToggle>
                     <DropdownMenu>
                         <Link className='navLink' onClick={toggle} to='/shop/beans'><DropdownItem>Coffee Beans</DropdownItem></Link>
                         <DropdownItem divider />
-                        <Link className='navLink' onClick={toggle} to='/menu'><DropdownItem >Bakery</DropdownItem></Link>
+                        <Link className='navLink' onClick={toggle}  to='/shop/merch'>Merch</Link>
                     </DropdownMenu>
                 </Dropdown>
-                <Link className='navLink' to='/shop/merch'>Shop</Link>
+                <Link className='navLink' to='/menu'>Menu</Link>
             </div>
             <div className='navTitleLogo'>
                 <Link to="/"><img className="navTitleLogo" alt='stus logo' src={stusTitle} /></Link>
             </div>
             <div className='navLinkContainer navContainer'>
-                <Link className='navLink' to='/menu'>Contact</Link>
+                <Link className='navLink' to='/charities'>Charities</Link>
                 <Link className='navLink' to='/about'>About</Link>
             </div>
             <div className='navIconContainer navContainer'>
@@ -43,19 +43,19 @@ const Nav = () => {
                 <Link to="/"><img className="navIcon" alt='liked icon' src={likedIcon} /></Link>
                 <div className="navCartContainer">
                     <img
-                        id="cartPopover"
+                        id="PopoverFocus"
                         onClick={toggleCart}
                         placement='left'
                         className="navIcon navCartIcon"
                         alt="bag icon"
                         src={bagIcon}
                     />
-                    <Popover className='cartPopover' flip placement='left' target="cartPopover" isOpen={isCartOpen} toggle={toggleCart}>
+                    <UncontrolledPopover className='cartPopover' flip placement='left' trigger='focus' target="PopoverFocus" isOpen={isCartOpen} toggle={toggleCart}>
                         <PopoverHeader className='cartTitle'>CART <img className='cartHeaderIcon' src={whiteBagIcon} /></PopoverHeader>
                         <PopoverBody className='cartBodySection'>
                             <Cart />
                         </PopoverBody>
-                    </Popover>
+                    </UncontrolledPopover>
                 </div>
             </div>
         </Navbar>

@@ -7,6 +7,7 @@ import Nav from './components/Nav.js';
 import Details from './pages/Details';
 import Faq from './pages/Faq'
 import Menu from './pages/Menu'
+import Charities from './pages/Charities'
 import Products from './pages/Products'
 import { ProductContext } from './context/ProductContext';
 import { useContext } from 'react';
@@ -29,6 +30,7 @@ function App() {
           <Route path='/about' element={<About />}></Route>
           <Route path="/details" element={selectedProduct === null ? <Home /> : <Details />} />
           <Route path='/success' element={<Success />}></Route>
+          <Route path='/charities' element={<Charities />}></Route>
         </Routes>
       </div>
       <Footer />

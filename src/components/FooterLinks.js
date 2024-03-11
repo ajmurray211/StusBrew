@@ -5,12 +5,14 @@ import hf4 from '../Assets/hf4.jpg'
 import hf5 from '../Assets/hf5.jpg'
 import arrowUpRightBlack from '../Assets/arrow-up-right-black.png'
 import arrowUpRightWhite from '../Assets/arrow-up-right-white.png'
+import { Link } from 'react-router-dom'
 
 const FooterLinks = () => {
     return (
         <div>
             <div className="menuCharaties">
-                <p className="menuCharatiesTxt">Charaties We Support<img className='menuLinkArrow' src={arrowUpRightWhite} /></p>
+                <Link className="menuCharatiesTxt" to='/charities'>CHECK OUT THE CHARITIES WE SUPPORT<img className='menuLinkArrow' src={arrowUpRightWhite} /></Link>
+                {/* <p className="menuCharatiesTxt">Charaties We Support<img className='menuLinkArrow' src={arrowUpRightWhite} /></p> */}
             </div>
 
             <div className='menuFollowSection'>
