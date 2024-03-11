@@ -1,27 +1,35 @@
 {
   "files": {
-    "main.css": "/static/css/main.18aef5ec.css",
-    "main.js": "/static/js/main.1f28da27.js",
+    "main.css": "/static/css/main.c21c4827.css",
+    "main.js": "/static/js/main.2f12d426.js",
     "static/js/787.67ea8a59.chunk.js": "/static/js/787.67ea8a59.chunk.js",
     "static/media/doughnuts.png": "/static/media/doughnuts.c993d04cf0201e60b09d.png",
     "static/media/smorescookies.png": "/static/media/smorescookies.fe89cef1148f7163ee03.png",
-    "static/media/stus_hat.png": "/static/media/stus_hat.c5b389d53f832eff4039.png",
+    "static/media/croissants.jpg": "/static/media/croissants.b82f27aa83467c4f478e.jpg",
+    "static/media/shop.jpg": "/static/media/shop.570ce02ade5979d548f0.jpg",
     "static/media/cinnimon-rolls.jpeg": "/static/media/cinnimon-rolls.5d3b31c3ad82a2822d2e.jpeg",
+    "static/media/kneeingDough.jpg": "/static/media/kneeingDough.57f6b030a8ec34c40eb2.jpg",
     "static/media/eggs-flour.png": "/static/media/eggs-flour.c2e52dc5b16392aae735.png",
     "static/media/bagles.jpeg": "/static/media/bagles.918da34fb508684444c9.jpeg",
-    "static/media/cup-beans2.png": "/static/media/cup-beans2.3fbc1daea46967a8edf6.png",
-    "static/media/greenCheck.png": "/static/media/greenCheck.1d30891a1e8eb1eb1c8a.png",
+    "static/media/fancyCup.jpg": "/static/media/fancyCup.96661cd0808d5592b8ba.jpg",
+    "static/media/stusCupLogo.png": "/static/media/stusCupLogo.25ceda60a6576e796fe9.png",
+    "static/media/hf3.jpg": "/static/media/hf3.459841061b046e35904a.jpg",
+    "static/media/hf5.jpg": "/static/media/hf5.70ab3ccbd811b8b48093.jpg",
+    "static/media/hf2.jpg": "/static/media/hf2.128504e001ed8353ddd1.jpg",
+    "static/media/hf1.jpg": "/static/media/hf1.2fec1c07ab776a9a2ed0.jpg",
     "static/media/outOfStockBanner.png": "/static/media/outOfStockBanner.ab7813629e3da3ba8884.png",
+    "static/media/stusTitle.png": "/static/media/stusTitle.a21054e00268d3eaac3d.png",
+    "static/media/coffeeCup.png": "/static/media/coffeeCup.454aff7d28411c558ee7.png",
     "static/media/stu.jpeg": "/static/media/stu.99c2f877d201ac77a6c0.jpeg",
-    "static/media/hat-logo.png": "/static/media/hat-logo.e4c70f3126cc6ed43161.png",
-    "static/media/images.jpg": "/static/media/images.9337d824aa9c7c9d503b.jpg",
+    "static/media/homeBeansBanner.png": "/static/media/homeBeansBanner.ec52c2c647af8a79ad45.png",
+    "static/media/hf4.jpg": "/static/media/hf4.bf8fab6b85f60954b3ba.jpg",
     "index.html": "/index.html",
-    "main.18aef5ec.css.map": "/static/css/main.18aef5ec.css.map",
-    "main.1f28da27.js.map": "/static/js/main.1f28da27.js.map",
+    "main.c21c4827.css.map": "/static/css/main.c21c4827.css.map",
+    "main.2f12d426.js.map": "/static/js/main.2f12d426.js.map",
     "787.67ea8a59.chunk.js.map": "/static/js/787.67ea8a59.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.18aef5ec.css",
-    "static/js/main.1f28da27.js"
+    "static/css/main.c21c4827.css",
+    "static/js/main.2f12d426.js"
   ]
 }
