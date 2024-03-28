@@ -15,77 +15,110 @@ const drinks = [
 
 const bakedGoodsSeedData = [
   {
-    classification: 'baked',
-    name: 'Carrot Cake',
-    description: 'A moist and flavorful carrot cake topped with cream cheese frosting. Perfect for any occasion!',
-    priceInCents: 2000, // 20$
-    image: 'carrot-cake.jpg', // Add the actual image file path or URL
-    ingredients: 'Carrots, flour, sugar, eggs, oil, cinnamon, cream cheese, butter, vanilla extract, powdered sugar'
+    dropdowns: {
+      ingredients: "Bananas, flour, sugar, eggs, butter, baking soda, salt, cinnamon, vanilla extract",
+      reviews: [
+        "No reviews on this product yet."
+      ]
+    },
+    _id: "6557d5cb94ba78c510071e0a",
+    classification: "baked",
+    name: "Banana Bread",
+    description: "Homemade banana bread made with ripe bananas and a hint of cinnamon. Great for breakfast or a snack!",
+    priceInCents: 1000,
+    image: "path/to/banana-bread-image.jpg",
+    stock: 0,
   },
   {
-    classification: 'baked',
-    name: 'Everything Bagel',
-    description: 'A classic everything bagel topped with a mix of sesame seeds, poppy seeds, garlic, onion, and salt.',
-    priceInCents: 120, // $1.20
-    image: 'everything-bagel.jpg', // Add the actual image file path or URL
-    ingredients: 'Flour, water, yeast, sugar, salt, sesame seeds, poppy seeds, garlic, onion'
+    dropdowns: {
+      ingredients: "Flour, sugar, brown sugar, butter, eggs, vanilla extract, baking soda, chocolate chips, oats, raisins, peanut butter",
+      reviews: [
+        "No reviews on this product yet."
+      ]
+    },
+    _id: "6557d5cb94ba78c510071e0b",
+    classification: "baked",
+    name: "12 Dozen Cookies",
+    description: "A variety pack of delicious cookies, including chocolate chip, oatmeal raisin, and peanut butter.",
+    priceInCents: 1500,
+    image: "path/to/cookies-image.jpg",
+    stock: 0,
   },
   {
-    classification: 'baked',
-    name: 'Banana Bread',
-    description: 'Homemade banana bread made with ripe bananas and a hint of cinnamon. Great for breakfast or a snack!',
-    priceInCents: 1000, // 10$
-    image: 'banana-bread.jpg', // Add the actual image file path or URL
-    ingredients: 'Bananas, flour, sugar, eggs, butter, baking soda, salt, cinnamon, vanilla extract'
+    dropdowns: {
+      ingredients: "Flour, sugar, cinnamon, yeast, milk, butter, eggs, cream cheese, powdered sugar, vanilla extract",
+      reviews: [
+        "No reviews on this product yet."
+      ]
+    },
+    _id: "6557d5cb94ba78c510071e0c",
+    classification: "assorted",
+    name: "Cinnamon Roll",
+    description: "Soft and gooey cinnamon roll with swirls of cinnamon sugar, topped with cream cheese icing.",
+    priceInCents: 500,
+    image: "path/to/cinnamon-roll-image.jpg",
+    stock: 0,
   },
   {
-    classification: 'baked',
-    name: '12 Dozen Cookies',
-    description: 'A variety pack of delicious cookies, including chocolate chip, oatmeal raisin, and peanut butter.',
-    priceInCents: 1500, // 15$
-    image: 'cookies.jpg', // Add the actual image file path or URL
-    ingredients: 'Flour, sugar, brown sugar, butter, eggs, vanilla extract, baking soda, chocolate chips, oats, raisins, peanut butter'
+    dropdowns: {
+      ingredients: "Oats, almonds, walnuts, dried cranberries, honey, coconut oil, vanilla extract",
+      reviews: [
+        "No reviews on this product yet."
+      ]
+    },
+    _id: "6557d5cb94ba78c510071e0d",
+    classification: "assorted",
+    name: "Bag of Granola",
+    description: "Nutritious granola mix with a blend of oats, nuts, dried fruits, and honey. A wholesome snack!",
+    priceInCents: 1500,
+    image: "path/to/granola-image.jpg",
+    stock: 0,
   },
   {
-    classification: 'assorted',
-    name: 'Cinnamon Roll',
-    description: 'Soft and gooey cinnamon roll with swirls of cinnamon sugar, topped with cream cheese icing.',
-    priceInCents: 500, // 5$
-    image: 'cinnamon-roll.jpg', // Add the actual image file path or URL
-    ingredients: 'Flour, sugar, cinnamon, yeast, milk, butter, eggs, cream cheese, powdered sugar, vanilla extract'
+    dropdowns: {
+      ingredients: "Flour, sugar, blueberries, milk, butter, eggs, yeast, powdered sugar, vanilla extract",
+      reviews: [
+        "No reviews on this product yet."
+      ]
+    },
+    _id: "6557d5cb94ba78c510071e0e",
+    classification: "doughnut",
+    name: "Raspberry Doughnut",
+    description: "Soft and fluffy doughnut filled with sweet raspberry jam and topped with a raspberry glaze.",
+    priceInCents: 180,
+    image: "path/to/raspberry-doughnut-image.jpg",
+    stock: 0,
   },
   {
-    classification: 'assorted',
-    name: 'Bag of Granola',
-    description: 'Nutritious granola mix with a blend of oats, nuts, dried fruits, and honey. A wholesome snack!',
-    priceInCents: 1500, // 15$
-    image: 'granola.jpg', // Add the actual image file path or URL
-    ingredients: 'Oats, almonds, walnuts, dried cranberries, honey, coconut oil, vanilla extract'
+    dropdowns: {
+      ingredients: "Flour, sugar, cocoa powder, milk, butter, eggs, yeast, powdered sugar, vanilla extract",
+      reviews: [
+        "No reviews on this product yet."
+      ]
+    },
+    _id: "6557d5cb94ba78c510071e0f",
+    classification: "doughnut",
+    name: "Chocolate Doughnut",
+    description: "Decadent chocolate doughnut with a rich chocolate glaze. A chocolate lover's delight!",
+    priceInCents: 200,
+    image: "path/to/chocolate-doughnut-image.jpg",
+    stock: 0,
   },
   {
-    classification: 'doughnut',
-    name: 'Raspberry Doughnut',
-    description: 'Soft and fluffy doughnut filled with sweet raspberry jam and topped with a raspberry glaze.',
-    priceInCents: 180, // $1.80
-    image: 'raspberry-doughnut.jpg', // Add the actual image file path or URL
-    ingredients: 'Flour, sugar, blueberries, milk, butter, eggs, yeast, powdered sugar, vanilla extract'
-  },
-  {
-    classification: 'doughnut',
-    name: 'Chocolate Doughnut',
-    description: 'Decadent chocolate doughnut with a rich chocolate glaze. A chocolate lover\'s delight!',
-    priceInCents: 200, // $2.00
-    image: 'chocolate-doughnut.jpg', // Add the actual image file path or URL
-    ingredients: 'Flour, sugar, cocoa powder, milk, butter, eggs, yeast, powdered sugar, vanilla extract'
-  },
-  {
-    classification: 'doughnut',
-    name: 'Maple Doughnut',
-    description: 'Classic doughnut with a sweet maple glaze, perfect for a cozy breakfast treat.',
-    priceInCents: 160, // $1.60
-    image: 'maple-doughnut.jpg', // Add the actual image file path or URL
-    ingredients: 'Flour, sugar, maple syrup, milk, butter, eggs, yeast, powdered sugar, vanilla extract'
-  },
+    dropdowns: {
+      ingredients: "Flour, sugar, maple syrup, milk, butter, eggs, yeast, powdered sugar, vanilla extract",
+      reviews: [
+        "No reviews on this product yet."
+      ]
+    },
+    _id: "6557d5cb94ba78c510071e10",
+    classification: "doughnut",
+    name: "Maple Doughnut",
+    description: "Classic doughnut with a sweet maple glaze, perfect for a cozy breakfast treat.",
+    priceInCents: 160,
+    image: "path/to/maple-doughnut-image.jpg",
+    stock: 0,
+  }
 ];
 const sandwichesAndSnacks = [
   { name: "Breakfast Sandwiches", types: ["Bacon, Egg, and Cheese", "Sausage, Egg, and Cheese"] },
@@ -151,7 +184,6 @@ const questions = [
     answer: "Yes, we offer gift cards that you can purchase and share with your friends and loved ones."
   },
 ];
-
 
 const merch = [
   {

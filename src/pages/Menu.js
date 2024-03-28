@@ -1,13 +1,6 @@
 import { bakedGoodsSeedData } from "../data";
 import stusCupLogo from '../Assets/stusCupLogo.png'
 import { Link } from "react-router-dom";
-import arrowUpRightBlack from '../Assets/arrow-up-right-black.png'
-import arrowUpRightWhite from '../Assets/arrow-up-right-white.png'
-import hf1 from '../Assets/hf1.jpg'
-import hf2 from '../Assets/hf2.jpg'
-import hf3 from '../Assets/hf3.jpg'
-import hf4 from '../Assets/hf4.jpg'
-import hf5 from '../Assets/hf5.jpg'
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../context/CartContext";
 import LoadingIcon from "../components/LoadingIcon";
@@ -24,7 +17,7 @@ const Menu = () => {
                 const data = await response.json();
                 setBakedGoodsData(data);
             } catch (error) {
-                console.error('Error fetching product details:', error);
+                setBakedGoodsData(bakedGoodsSeedData)
             }
         };
 
