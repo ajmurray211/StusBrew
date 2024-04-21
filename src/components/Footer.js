@@ -12,7 +12,7 @@ import emailjs from 'emailjs-com';
 const Footer = () => {
     const [userInput, setUserInput] = useState('')
     const { API_URL } = useContext(CartContext)
-    const publicKey = process.env.PUBLIC_KEY
+    const publicKey = process.env.REACT_APP_PUBLIC_KEY
     const [success, setSuccess] = useState(false)
     const [fail, setFail] = useState(false)
 
@@ -35,11 +35,11 @@ const Footer = () => {
             publicKey,
         )
             .then((response) => {
-                console.log('Email sent successfully:', response);
+                // console.log('Email sent successfully:', response);
                 setSuccess(true);
             })
             .catch((error) => {
-                console.log('Email send failed:', error);
+                // console.log('Email send failed:', error);
                 setFail(true);
             });
     }

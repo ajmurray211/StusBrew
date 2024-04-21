@@ -14,11 +14,10 @@ const About = (props) => {
     const [message, setMessage] = useState('');
     const [success, setSuccess] = useState(false)
     const [fail, setFail] = useState(false)
-    const publicKey = process.env.PUBLIC_KEY
+    const publicKey = process.env.REACT_APP_PUBLIC_KEY
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('handle submit')
 
         const formData = {
             firstName: firstName,
@@ -35,11 +34,11 @@ const About = (props) => {
             publicKey,
         )
             .then((response) => {
-                console.log('Email sent successfully:', response);
+                // console.log('Email sent successfully:', response);
                 setSuccess(true);
             })
             .catch((error) => {
-                console.log('Email send failed:', error);
+                // console.log('Email send failed:', error);
                 setFail(true);
             });
     }
