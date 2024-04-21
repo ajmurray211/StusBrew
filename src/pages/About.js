@@ -14,12 +14,13 @@ const About = (props) => {
     const [message, setMessage] = useState('');
     const [success, setSuccess] = useState(false)
     const [fail, setFail] = useState(false)
+    const publicKey = process.env.PUBLIC_KEY
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('handle submit')
 
-        const formData = { 
+        const formData = {
             firstName: firstName,
             lastName: lastName,
             email: email,
@@ -31,7 +32,7 @@ const About = (props) => {
             "service_f7wr6ri",
             "template_z1m84fq",
             formData,
-            'WBo5qTknaJm9JCObT',
+            publicKey,
         )
             .then((response) => {
                 console.log('Email sent successfully:', response);

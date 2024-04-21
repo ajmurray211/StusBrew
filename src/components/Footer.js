@@ -32,7 +32,7 @@ const Footer = () => {
             "service_f7wr6ri",
             "template_fiae67r",
             formData,
-            'WBo5qTknaJm9JCObT',
+            publicKey,
         )
             .then((response) => {
                 console.log('Email sent successfully:', response);
