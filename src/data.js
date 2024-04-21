@@ -25,25 +25,40 @@ const bakedGoodsSeedData = [
     classification: "baked",
     name: "Banana Bread",
     description: "Homemade banana bread made with ripe bananas and a hint of cinnamon. Great for breakfast or a snack!",
-    priceInCents: 1000,
+    priceInCents: 600,
     image: "path/to/banana-bread-image.jpg",
     stock: 0,
   },
   {
     dropdowns: {
-      ingredients: "Flour, sugar, brown sugar, butter, eggs, vanilla extract, baking soda, chocolate chips, oats, raisins, peanut butter",
+      ingredients: "EGGS, SUGAR, VEGETABLE OIL, PINEAPPLE, CARROTS, FLOUR, CINNAMON, SALT, VANILLA",
       reviews: [
         "No reviews on this product yet."
       ]
     },
     _id: "6557d5cb94ba78c510071e0b",
     classification: "baked",
-    name: "12 Dozen Cookies",
-    description: "A variety pack of delicious cookies, including chocolate chip, oatmeal raisin, and peanut butter.",
-    priceInCents: 1500,
-    image: "path/to/cookies-image.jpg",
+    name: "Carrot Cake",
+    description: "Homemade banana bread made with ripe bananas and a hint of cinnamon. Great for breakfast or a snack!",
+    priceInCents: 800,
+    image: "path/to/banana-bread-image.jpg",
     stock: 0,
   },
+  // {
+  //   dropdowns: {
+  //     ingredients: "Flour, sugar, brown sugar, butter, eggs, vanilla extract, baking soda, chocolate chips, oats, raisins, peanut butter",
+  //     reviews: [
+  //       "No reviews on this product yet."
+  //     ]
+  //   },
+  //   _id: "6557d5cb94ba78c510071e0b",
+  //   classification: "baked",
+  //   name: "12 Dozen Cookies",
+  //   description: "A variety pack of delicious cookies, including chocolate chip, oatmeal raisin, and peanut butter.",
+  //   priceInCents: 1500,
+  //   image: "path/to/cookies-image.jpg",
+  //   stock: 0,
+  // },
   {
     dropdowns: {
       ingredients: "Flour, sugar, cinnamon, yeast, milk, butter, eggs, cream cheese, powdered sugar, vanilla extract",
@@ -53,22 +68,22 @@ const bakedGoodsSeedData = [
     },
     _id: "6557d5cb94ba78c510071e0c",
     classification: "assorted",
-    name: "Cinnamon Roll",
-    description: "Soft and gooey cinnamon roll with swirls of cinnamon sugar, topped with cream cheese icing.",
-    priceInCents: 500,
+    name: "Sugar Cookies",
+    description: "FLOUR, BUTTER, SALT, SUGAR, VANILLA, EGGS, CREAM CHEESE, ALMOND EX.",
+    priceInCents: 800,
     image: "path/to/cinnamon-roll-image.jpg",
     stock: 0,
   },
   {
     dropdowns: {
-      ingredients: "Oats, almonds, walnuts, dried cranberries, honey, coconut oil, vanilla extract",
+      ingredients: "OATS, WALNUTS, ALMONDS, PECANS, COCONUT, SALT, CINNAMON, HONEY, VANILLA, CANOLA OIL",
       reviews: [
         "No reviews on this product yet."
       ]
     },
     _id: "6557d5cb94ba78c510071e0d",
     classification: "assorted",
-    name: "Bag of Granola",
+    name: "Granola",
     description: "Nutritious granola mix with a blend of oats, nuts, dried fruits, and honey. A wholesome snack!",
     priceInCents: 1500,
     image: "path/to/granola-image.jpg",

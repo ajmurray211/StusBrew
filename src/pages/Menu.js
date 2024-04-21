@@ -17,6 +17,7 @@ const Menu = () => {
                 const data = await response.json();
                 setBakedGoodsData(data);
             } catch (error) {
+                console.log('default data')
                 setBakedGoodsData(bakedGoodsSeedData)
             }
         };
@@ -32,7 +33,7 @@ const Menu = () => {
         if (item.classification == 'baked') {
             return (
                 <li className="menuOption">
-                    <Link to={`/shop/bakedGoods/${encodeURIComponent(item._id)}`} className="menuOptionLink">
+                    <Link disabled to={`/shop/bakedGoods/${encodeURIComponent(item._id)}`} className="menuOptionLink">
                         <p className='menuOptionTitle'>{item.name}</p>
                     </Link>
                     <p className='menuOptionDescription'>{item.description}</p>
@@ -56,7 +57,7 @@ const Menu = () => {
     const doughnuts = bakedGoodsData.map((item) => {
         if (item.classification == 'doughnut') {
             return (
-                <li className="menuOption">
+                <li className="menuOption menuOptionDisabled">
                     <Link className="menuOptionLink">
                         <p className='menuOptionTitle'>{item.name}</p>
                     </Link>

@@ -3,29 +3,62 @@ import facebookIcon from '../Assets/facebookIcon.png';
 import pintrestIcon from '../Assets/pintrestIcon.png';
 import tiktokIcon from '../Assets/tiktokIcon.png';
 import arrowIcon from '../Assets/arrowIcon.png';
-import { Button, Input, Label } from "reactstrap";
+import { Alert, Button, Input, Label } from "reactstrap";
 import { useContext, useState } from "react";
 import axios from "axios";
 import { CartContext } from "../context/CartContext";
+import emailjs from 'emailjs-com';
 
 const Footer = () => {
-    const [userInput, setUserInput] = useState()
+    const [userInput, setUserInput] = useState('zcxvzxcvz')
     const { API_URL } = useContext(CartContext)
+    const publicKey = process.env.PUBLIC_KEY
+    const [success, setSuccess] = useState(false)
+    const [fail, setFail] = useState(false)
+
+    const validateEmail = (email) => {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    }
 
     const handleSignUp = (e) => {
-        console.log(userInput)
-        axios.post(`${API_URL}newsLetter/signUp`, { email: userInput })
-            .then(res => {
-                console.log(res)
+        e.preventDefault();
+
+        const formData = {
+            user_email: userInput 
+        };
+
+        emailjs.send(
+            "service_f7wr6ri",
+            "template_fiae67r",
+            formData,
+            'WBo5qTknaJm9JCObT',
+        )
+            .then((response) => {
+                console.log('Email sent successfully:', response);
+                setSuccess(true);
             })
-            .catch(err => {
-                console.log(err)
+            .catch((error) => {
+                console.log('Email send failed:', error);
+                setFail(true);
             });
     }
+
+    // console.log(userInput)
+    // axios.post(`${API_URL}newsLetter/signUp`, { email: userInput })
+    //     .then(res => {
+    //         console.log(res)
+    //     })
+    //     .catch(err => {
+    //         console.log(err)
+    //     });
 
     return (
         <footer className='footer'>
             <div className='footerSocialsSection'>
+                <Alert isOpen={success} color="success" className='emailAlert'>Your email has been sent!</Alert>
+                <Alert isOpen={fail} color="danger" className='emailAlert'>Oh no there was a problem please try again!</Alert>
+
                 <div id="newsLetter">
                     <h1 className="footerTitle">Join our club, get 15% off for your Birthday</h1>
                     <div id="inputContainer">

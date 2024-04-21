@@ -1,24 +1,47 @@
-import Charities from './Charities';
 import phoneIcon from '../Assets/phoneIcon.png'
 import emailIcon from '../Assets/emailIcon.png'
 import { Input, Button, Form, Row, Col } from 'reactstrap';
 import FooterLinks from '../components/FooterLinks';
 import { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 const About = (props) => {
     const stu = process.env.PUBLIC_URL + '/assets/stu.jpeg'
-
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [message, setMessage] = useState('');
+    const [success, setSuccess] = useState(false)
+    const [fail, setFail] = useState(false)
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log('handle submit')
 
-        console.log('Form submitted:', { firstName, lastName, email, phoneNumber, message });
-    };
+        const formData = { 
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            phoneNumber: phoneNumber,
+            message: message
+        };
+
+        emailjs.send(
+            "service_f7wr6ri",
+            "template_z1m84fq",
+            formData,
+            'WBo5qTknaJm9JCObT',
+        )
+            .then((response) => {
+                console.log('Email sent successfully:', response);
+                setSuccess(true);
+            })
+            .catch((error) => {
+                console.log('Email send failed:', error);
+                setFail(true);
+            });
+    }
 
     return (
         <div id='aboutPage'>
@@ -54,9 +77,9 @@ const About = (props) => {
                     <p className='aboutContactTimes'>Call our team Mon-Fri from 8 am to 5 pm.</p>
                     <p className='aboutContactSubTitle'>Call us.</p>
                     <p className='aboutContactNumber'><img className='aboutContactIcon' src={phoneIcon} /> 000-000-0000</p>
-                    <p className='aboutContactEmail'><img className='aboutContactIcon' src={emailIcon} /> hello@stusbakenbrew.com</p>
+                    <p className='aboutContactEmail'><img className='aboutContactIcon' src={emailIcon} />stusbakenbrew@gmail.com</p>
                 </div>
-                <Form className='aboutContactInputs' onSubmit={handleSubmit}>
+                <div className='aboutContactInputs'>
                     <Row className='aboutInputRow'>
                         <Col md={6}>
                             <Input
@@ -94,8 +117,8 @@ const About = (props) => {
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                     />
-                    <Button className='aboutFormSubmit' type='submit'>Submit</Button>
-                </Form>
+                    <Button className='aboutFormSubmit' onClick={handleSubmit}>Submit</Button>
+                </div>
             </div>
 
             <FooterLinks />
