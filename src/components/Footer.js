@@ -10,7 +10,7 @@ import { CartContext } from "../context/CartContext";
 import emailjs from 'emailjs-com';
 
 const Footer = () => {
-    const [userInput, setUserInput] = useState('zcxvzxcvz')
+    const [userInput, setUserInput] = useState('')
     const { API_URL } = useContext(CartContext)
     const publicKey = process.env.PUBLIC_KEY
     const [success, setSuccess] = useState(false)
