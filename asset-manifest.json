@@ -1,12 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.c21c4827.css",
-    "main.js": "/static/js/main.a83f4535.js",
+    "main.css": "/static/css/main.77cd2089.css",
+    "main.js": "/static/js/main.0cf36ac1.js",
     "static/js/787.67ea8a59.chunk.js": "/static/js/787.67ea8a59.chunk.js",
     "static/media/doughnuts.png": "/static/media/doughnuts.c993d04cf0201e60b09d.png",
     "static/media/smorescookies.png": "/static/media/smorescookies.fe89cef1148f7163ee03.png",
     "static/media/croissants.jpg": "/static/media/croissants.b82f27aa83467c4f478e.jpg",
     "static/media/shop.jpg": "/static/media/shop.570ce02ade5979d548f0.jpg",
+    "static/media/BAM.png": "/static/media/BAM.b10eb94ee20e4aee9271.png",
+    "static/media/SHC.png": "/static/media/SHC.5a5db1b8cadfe23a480e.png",
+    "static/media/SSS.png": "/static/media/SSS.b1bdefdd2d759ed04a6b.png",
     "static/media/cinnimon-rolls.jpeg": "/static/media/cinnimon-rolls.5d3b31c3ad82a2822d2e.jpeg",
     "static/media/kneeingDough.jpg": "/static/media/kneeingDough.57f6b030a8ec34c40eb2.jpg",
     "static/media/eggs-flour.png": "/static/media/eggs-flour.c2e52dc5b16392aae735.png",
@@ -24,12 +27,12 @@
     "static/media/homeBeansBanner.png": "/static/media/homeBeansBanner.ec52c2c647af8a79ad45.png",
     "static/media/hf4.jpg": "/static/media/hf4.bf8fab6b85f60954b3ba.jpg",
     "index.html": "/index.html",
-    "main.c21c4827.css.map": "/static/css/main.c21c4827.css.map",
-    "main.a83f4535.js.map": "/static/js/main.a83f4535.js.map",
+    "main.77cd2089.css.map": "/static/css/main.77cd2089.css.map",
+    "main.0cf36ac1.js.map": "/static/js/main.0cf36ac1.js.map",
     "787.67ea8a59.chunk.js.map": "/static/js/787.67ea8a59.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c21c4827.css",
-    "static/js/main.a83f4535.js"
+    "static/css/main.77cd2089.css",
+    "static/js/main.0cf36ac1.js"
   ]
 }
